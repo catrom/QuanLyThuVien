@@ -102,7 +102,6 @@
     <Compile Include="DangNhapDAL.vb" />
     <Compile Include="ThamSoDAL.vb" />
     <Compile Include="TheLoaiDAL.vb" />
-    <Compile Include="TheLoaiSachDAL.vb" />
     <Compile Include="TinhTrangDAL.vb" />
     <Compile Include="VaiTroDAL.vb" />
   </ItemGroup>

@@ -27,6 +27,10 @@ Public Class NguoiDungBUS
         Return nd.selectALL_ByEmail(email, list)
     End Function
 
+    Public Function getByMaNguoiDung(manguoidung As String, ByRef value As NguoiDungDTO) As Result
+        Return nd.getByMaNguoiDung(manguoidung, value)
+    End Function
+
     Public Function buildMaNguoiDung(ByRef value As String) As Result
         Return nd.build_manguoidung(value)
     End Function

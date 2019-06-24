@@ -30,16 +30,9 @@ Partial Class splashScreen
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnDocGia = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.lbDoiMatKhau = New System.Windows.Forms.Label()
-        Me.lbTroVe = New System.Windows.Forms.Label()
-        Me.lbThoat = New System.Windows.Forms.Label()
-        Me.btnOK = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btnDangNhap = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbTrangThaiMK = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.tbNhapLaiMatKhauMoi = New System.Windows.Forms.TextBox()
-        Me.tbMatKhauMoi = New System.Windows.Forms.TextBox()
         Me.tbMatKhau = New System.Windows.Forms.TextBox()
         Me.tbMaDangNhap = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,6 +44,7 @@ Partial Class splashScreen
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuDragControl2 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuDragControl3 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.lbTrangThaiMK = New System.Windows.Forms.Label()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.pnDangNhap.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,9 +69,9 @@ Partial Class splashScreen
         Me.BunifuGradientPanel1.Controls.Add(Me.progressBar)
         Me.BunifuGradientPanel1.Controls.Add(Me.lbStatus)
         Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black
+        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White
         Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray
-        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Transparent
         Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
@@ -110,16 +104,10 @@ Partial Class splashScreen
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.btnDocGia)
-        Me.Panel3.Controls.Add(Me.lbDoiMatKhau)
-        Me.Panel3.Controls.Add(Me.lbTroVe)
-        Me.Panel3.Controls.Add(Me.lbThoat)
-        Me.Panel3.Controls.Add(Me.btnOK)
         Me.Panel3.Controls.Add(Me.btnDangNhap)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.lbTrangThaiMK)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.tbNhapLaiMatKhauMoi)
-        Me.Panel3.Controls.Add(Me.tbMatKhauMoi)
         Me.Panel3.Controls.Add(Me.tbMatKhau)
         Me.Panel3.Controls.Add(Me.tbMaDangNhap)
         Me.Panel3.Controls.Add(Me.Label1)
@@ -137,7 +125,7 @@ Partial Class splashScreen
         Me.btnDocGia.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(211, Byte), Integer))
         Me.btnDocGia.BackColor = System.Drawing.Color.Transparent
         Me.btnDocGia.BackgroundImage = CType(resources.GetObject("btnDocGia.BackgroundImage"), System.Drawing.Image)
-        Me.btnDocGia.ButtonText = "Đăng nhập với tư cách độc giả"
+        Me.btnDocGia.ButtonText = "Đăng nhập với tư cách khách"
         Me.btnDocGia.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDocGia.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDocGia.ForeColor = System.Drawing.Color.White
@@ -152,64 +140,6 @@ Partial Class splashScreen
         Me.btnDocGia.Size = New System.Drawing.Size(238, 41)
         Me.btnDocGia.TabIndex = 6
         Me.btnDocGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lbDoiMatKhau
-        '
-        Me.lbDoiMatKhau.AutoSize = True
-        Me.lbDoiMatKhau.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbDoiMatKhau.ForeColor = System.Drawing.Color.Black
-        Me.lbDoiMatKhau.Location = New System.Drawing.Point(3, 399)
-        Me.lbDoiMatKhau.Name = "lbDoiMatKhau"
-        Me.lbDoiMatKhau.Size = New System.Drawing.Size(103, 21)
-        Me.lbDoiMatKhau.TabIndex = 5
-        Me.lbDoiMatKhau.Text = "Đổi mật khẩu"
-        '
-        'lbTroVe
-        '
-        Me.lbTroVe.AutoSize = True
-        Me.lbTroVe.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTroVe.ForeColor = System.Drawing.Color.Black
-        Me.lbTroVe.Location = New System.Drawing.Point(4, 399)
-        Me.lbTroVe.Name = "lbTroVe"
-        Me.lbTroVe.Size = New System.Drawing.Size(53, 21)
-        Me.lbTroVe.TabIndex = 5
-        Me.lbTroVe.Text = "Trở về"
-        '
-        'lbThoat
-        '
-        Me.lbThoat.AutoSize = True
-        Me.lbThoat.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbThoat.ForeColor = System.Drawing.Color.Black
-        Me.lbThoat.Location = New System.Drawing.Point(187, 399)
-        Me.lbThoat.Name = "lbThoat"
-        Me.lbThoat.Size = New System.Drawing.Size(49, 21)
-        Me.lbThoat.TabIndex = 5
-        Me.lbThoat.Text = "Thoát"
-        '
-        'btnOK
-        '
-        Me.btnOK.ActiveBorderThickness = 1
-        Me.btnOK.ActiveCornerRadius = 20
-        Me.btnOK.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.btnOK.ActiveForecolor = System.Drawing.Color.White
-        Me.btnOK.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(211, Byte), Integer))
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.BackgroundImage = CType(resources.GetObject("btnOK.BackgroundImage"), System.Drawing.Image)
-        Me.btnOK.ButtonText = "OK"
-        Me.btnOK.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnOK.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOK.ForeColor = System.Drawing.Color.White
-        Me.btnOK.IdleBorderThickness = 1
-        Me.btnOK.IdleCornerRadius = 20
-        Me.btnOK.IdleFillColor = System.Drawing.Color.DimGray
-        Me.btnOK.IdleForecolor = System.Drawing.Color.White
-        Me.btnOK.IdleLineColor = System.Drawing.Color.Transparent
-        Me.btnOK.Location = New System.Drawing.Point(69, 357)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(100, 41)
-        Me.btnOK.TabIndex = 4
-        Me.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnDangNhap
         '
@@ -246,17 +176,6 @@ Partial Class splashScreen
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Mật khẩu:"
         '
-        'lbTrangThaiMK
-        '
-        Me.lbTrangThaiMK.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTrangThaiMK.ForeColor = System.Drawing.Color.Red
-        Me.lbTrangThaiMK.Location = New System.Drawing.Point(9, 274)
-        Me.lbTrangThaiMK.Name = "lbTrangThaiMK"
-        Me.lbTrangThaiMK.Size = New System.Drawing.Size(220, 52)
-        Me.lbTrangThaiMK.TabIndex = 2
-        Me.lbTrangThaiMK.Text = "Thay đổi mật khẩu thành công"
-        Me.lbTrangThaiMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -266,30 +185,6 @@ Partial Class splashScreen
         Me.Label2.Size = New System.Drawing.Size(113, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Mã đăng nhập:"
-        '
-        'tbNhapLaiMatKhauMoi
-        '
-        Me.tbNhapLaiMatKhauMoi.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.tbNhapLaiMatKhauMoi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNhapLaiMatKhauMoi.Location = New System.Drawing.Point(5, 244)
-        Me.tbNhapLaiMatKhauMoi.MaxLength = 8
-        Me.tbNhapLaiMatKhauMoi.Name = "tbNhapLaiMatKhauMoi"
-        Me.tbNhapLaiMatKhauMoi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbNhapLaiMatKhauMoi.Size = New System.Drawing.Size(229, 29)
-        Me.tbNhapLaiMatKhauMoi.TabIndex = 5
-        Me.tbNhapLaiMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'tbMatKhauMoi
-        '
-        Me.tbMatKhauMoi.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.tbMatKhauMoi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMatKhauMoi.Location = New System.Drawing.Point(5, 209)
-        Me.tbMatKhauMoi.MaxLength = 8
-        Me.tbMatKhauMoi.Name = "tbMatKhauMoi"
-        Me.tbMatKhauMoi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbMatKhauMoi.Size = New System.Drawing.Size(229, 29)
-        Me.tbMatKhauMoi.TabIndex = 4
-        Me.tbMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tbMatKhau
         '
@@ -399,6 +294,17 @@ Partial Class splashScreen
         Me.BunifuDragControl3.TargetControl = Me.pnLogo
         Me.BunifuDragControl3.Vertical = True
         '
+        'lbTrangThaiMK
+        '
+        Me.lbTrangThaiMK.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTrangThaiMK.ForeColor = System.Drawing.Color.Red
+        Me.lbTrangThaiMK.Location = New System.Drawing.Point(9, 274)
+        Me.lbTrangThaiMK.Name = "lbTrangThaiMK"
+        Me.lbTrangThaiMK.Size = New System.Drawing.Size(220, 52)
+        Me.lbTrangThaiMK.TabIndex = 2
+        Me.lbTrangThaiMK.Text = "Thay đổi mật khẩu thành công"
+        Me.lbTrangThaiMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'splashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -439,15 +345,9 @@ Partial Class splashScreen
     Friend WithEvents Label2 As Label
     Friend WithEvents tbMatKhau As TextBox
     Friend WithEvents tbMaDangNhap As TextBox
-    Friend WithEvents lbThoat As Label
     Friend WithEvents btnDangNhap As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents BunifuDragControl2 As Bunifu.Framework.UI.BunifuDragControl
-    Friend WithEvents lbDoiMatKhau As Label
-    Friend WithEvents tbNhapLaiMatKhauMoi As TextBox
-    Friend WithEvents tbMatKhauMoi As TextBox
-    Friend WithEvents btnOK As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents lbTrangThaiMK As Label
     Friend WithEvents btnDocGia As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents lbTroVe As Label
     Friend WithEvents BunifuDragControl3 As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents lbTrangThaiMK As Label
 End Class

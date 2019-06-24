@@ -2,7 +2,7 @@
 Imports QLTVDTO
 Imports Utility
 
-Public Class DauSachBus
+Public Class DauSachBUS
     Private s As DauSachDAL
     Public Sub New()
         s = New DauSachDAL()

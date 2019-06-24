@@ -2,7 +2,7 @@
     Private strMaNguoiDung As String
     Private strHoTen As String
     Private strCMND As String
-    Private strGioiTinh As String
+    Private strGioiTinh As Boolean
     Private dtNgaySinh As DateTime
     Private strDiaChi As String
     Private strEmail As String
@@ -13,7 +13,7 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(strMaNguoiDung As String, strHoTen As String, strCMND As String, strGioiTinh As String, dtNgaySinh As Date, strDiaChi As String, strEmail As String, strSoDienThoai As String, strVaiTro As String, dtNgayTao As Date)
+    Public Sub New(strMaNguoiDung As String, strHoTen As String, strCMND As String, strGioiTinh As Boolean, dtNgaySinh As Date, strDiaChi As String, strEmail As String, strSoDienThoai As String, strVaiTro As String, dtNgayTao As Date)
         Me.strMaNguoiDung = strMaNguoiDung
         Me.strHoTen = strHoTen
         Me.strCMND = strCMND
@@ -53,11 +53,11 @@
         End Set
     End Property
 
-    Public Property GioiTinh As String
+    Public Property GioiTinh As Boolean
         Get
             Return strGioiTinh
         End Get
-        Set(value As String)
+        Set(value As Boolean)
             strGioiTinh = value
         End Set
     End Property

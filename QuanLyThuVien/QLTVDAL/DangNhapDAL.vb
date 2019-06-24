@@ -69,7 +69,11 @@ Public Class DangNhapDAL
                         While reader.Read()
                             value = New DangNhapDTO(reader("madangnhap"), reader("nguoidung"), reader("tendangnhap"), reader("matkhau"), reader("dangnhaplandau"))
                         End While
+                    Else
+                        Return New Result(True, "invalid", "invalid")
                     End If
+
+
                 Catch ex As Exception
                     Console.WriteLine(ex.StackTrace)
                     conn.Close()

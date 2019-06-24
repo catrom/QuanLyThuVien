@@ -4,20 +4,17 @@ Imports Utility
 Imports System.Diagnostics
 
 Public Class ucThuVien
-    Dim dgBus As DocGiaBus
-    Dim ctpmBus As ChiTietPhieuMuonBus
-    Dim sachBus As SachBUS
+    Dim ctpmBus As ChiTietPhieuMuonBUS
+    Dim sachBus As DauSachBUS
 
     Private Sub ucThuVien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim result As Result
-        dgBus = New DocGiaBus()
-        ctpmBus = New ChiTietPhieuMuonBus()
-        sachBus = New SachBUS()
+        ctpmBus = New ChiTietPhieuMuonBUS()
+        sachBus = New DauSachBUS()
 
         ' Hien thi so dau sach
-        Dim listSach As List(Of SachDTO)
-        listSach = New List(Of SachDTO)
-        result = sachBus.selectAll(listSach)
+        Dim listSach As New List(Of DauSachDTO)
+        result = sachBus.selectALL(listSach)
 
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách đầu sách thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -30,7 +27,7 @@ Public Class ucThuVien
         ' Hien thi so doc gia
         Dim listDocGia As List(Of DocGiaDTO)
         listDocGia = New List(Of DocGiaDTO)
-        result = dgBus.selectAll(listDocGia)
+        'result = dgBus.selectAll(listDocGia)
 
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách độc giả thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -55,6 +52,6 @@ Public Class ucThuVien
     End Sub
 
     Private Sub LinkLabel1_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs)
-        Process.Start("https://github.com/tungphan311/QLTV")
+        Process.Start("https://github.com/catrom/QuanLyThuVien")
     End Sub
 End Class

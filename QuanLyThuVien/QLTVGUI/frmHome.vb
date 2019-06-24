@@ -1,10 +1,23 @@
 ﻿Imports System.Windows.Forms
+Imports QLTVDTO
+Imports QLTVBus
 
 Public Class frmHome
+    Public dangnhap As DangNhapDTO
+    Public dangnhapBus As New DangNhapBus
+    Public vaitro As New VaiTroDTO
+
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         fpnZone.Controls.Clear()
         Dim ucThuVien As New ucThuVien
         fpnZone.Controls.Add(ucThuVien)
+
+        If dangnhap Is Nothing Then
+            Me.lbTrangThai.Text = "Vai trò: KHÁCH"
+        Else
+            dangnhapBus.getVaiTro(dangnhap, vaitro)
+            Me.lbTrangThai.Text = "Vai trò: " + vaitro.TenVaiTro
+        End If
     End Sub
 
     Private Sub ibtnExit_Click(sender As Object, e As EventArgs) Handles ibtnExit.Click
@@ -18,48 +31,6 @@ Public Class frmHome
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnLapTheDocGia_Click(sender As Object, e As EventArgs) Handles btnLapTheDocGia.Click
-        fpnZone.Controls.Clear()
-        Dim ucDocGia As New ucDocGia
-        fpnZone.Controls.Add(ucDocGia)
-    End Sub
-
-    Private Sub btnTiepNhanSachMoi_Click(sender As Object, e As EventArgs) Handles btnTiepNhanSachMoi.Click
-        fpnZone.Controls.Clear()
-        Dim ucTiepNhanSachMoi As New ucTiepNhanSachMoi
-        fpnZone.Controls.Add(ucTiepNhanSachMoi)
-    End Sub
-
-    Private Sub btnTraCuuSach_Click(sender As Object, e As EventArgs) Handles btnTraCuuSach.Click
-        fpnZone.Controls.Clear()
-        Dim ucTraCuuSach As New ucTraCuuSach
-        fpnZone.Controls.Add(ucTraCuuSach)
-    End Sub
-
-    Private Sub btnChoMuonSach_Click(sender As Object, e As EventArgs) Handles btnChoMuonSach.Click
-        fpnZone.Controls.Clear()
-        Dim ucChoMuonSach As New ucChoMuonSach
-        fpnZone.Controls.Add(ucChoMuonSach)
-    End Sub
-
-    Private Sub btnNhanTraSach_Click(sender As Object, e As EventArgs) Handles btnNhanTraSach.Click
-        fpnZone.Controls.Clear()
-        Dim ucNhanTraSach As New ucNhanTraSach
-        fpnZone.Controls.Add(ucNhanTraSach)
-    End Sub
-
-    Private Sub btnLapBaoCao_Click(sender As Object, e As EventArgs) Handles btnLapBaoCao.Click
-        fpnZone.Controls.Clear()
-        Dim ucBaoCao As New ucBaoCao
-        fpnZone.Controls.Add(ucBaoCao)
-    End Sub
-
-    Private Sub btnThayDoiQuyDinh_Click(sender As Object, e As EventArgs) Handles btnThayDoiQuyDinh.Click
-        fpnZone.Controls.Clear()
-        Dim ucThayDoiQuyDinh As New ucThayDoiQuyDinh
-        fpnZone.Controls.Add(ucThayDoiQuyDinh)
-    End Sub
-
     Private Sub btnLogo_Click(sender As Object, e As EventArgs)
         fpnZone.Controls.Clear()
         Dim ucThuVien As New ucThuVien
@@ -68,13 +39,10 @@ Public Class frmHome
     End Sub
 
     Private Sub UnSelectedAll()
-        btnLapTheDocGia.selected = False
-        btnTiepNhanSachMoi.selected = False
-        btnTraCuuSach.selected = False
-        btnChoMuonSach.selected = False
-        btnNhanTraSach.selected = False
-        btnLapBaoCao.selected = False
-        btnThayDoiQuyDinh.selected = False
+        btnNguoiDung.selected = False
+        btnTraCuu.selected = False
+        btnQuanLyDocGia.selected = False
+        btnBaoCao.selected = False
     End Sub
 
     Private Sub lbThayDoi_MouseHover(sender As Object, e As EventArgs) Handles lbThayDoi.MouseHover
@@ -90,5 +58,20 @@ Public Class frmHome
 
         Dim splash As New splashScreen
         splash.Show()
+    End Sub
+
+    Private Sub btnQuanLyDocGia_Click(sender As Object, e As EventArgs) Handles btnQuanLyDocGia.Click
+        fpnZone.Controls.Clear()
+        Dim ucDocGia As New ucDocGia
+        fpnZone.Controls.Add(ucDocGia)
+    End Sub
+
+    Private Sub btnNguoiDung_Click(sender As Object, e As EventArgs) Handles btnNguoiDung.Click
+        fpnZone.Controls.Clear()
+        Dim ucThongTinNguoiDung As New ucThongTinNguoiDung With {
+            .dangnhap = Me.dangnhap
+        }
+
+        fpnZone.Controls.Add(ucThongTinNguoiDung)
     End Sub
 End Class

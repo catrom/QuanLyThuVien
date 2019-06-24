@@ -170,6 +170,40 @@ Public Class NguoiDungDAL
         Return New Result(True)
     End Function
 
+    Public Function getByMaNguoiDung(manguoidung As String, ByRef value As NguoiDungDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= "select * "
+        query &= "from [tblNguoiDung] "
+        query &= "where [manguoidung] = @manguoidung"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@manguoidung", manguoidung)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New NguoiDungDTO(reader("manguoidung"), reader("hoten"), reader("CMND"), reader("gioitinh"), reader("ngaysinh"), reader("diachi"), reader("email"), reader("sodienthoai"), reader("vaitro"), reader("ngaytao"))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
     Public Function selectAll_ByHoTen(hoten As String, ByRef list As List(Of String)) As Result
         Dim query As String = String.Empty
         query &= "select [manguoidung] "

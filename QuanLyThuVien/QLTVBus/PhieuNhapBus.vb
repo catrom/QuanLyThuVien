@@ -2,7 +2,7 @@
 Imports QLTVDTO
 Imports Utility
 
-Public Class PhieuNhapBus
+Public Class PhieuNhapBUS
     Private pn As PhieuNhapDAL
     Public Sub New()
         pn = New PhieuNhapDAL()

@@ -96,6 +96,41 @@ Public Class VaiTroDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getByMaVaiTro(mavaitro As String, ByRef value As VaiTroDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT *"
+        query &= "FROM [tblVaiTro] "
+        query &= "WHERE [mavaitro] = @mavaitro "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@mavaitro", mavaitro)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New VaiTroDTO(reader("mavaitro"), reader("tenvaitro"))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function insert(value As VaiTroDTO) As Result
 
         Dim query As String = String.Empty

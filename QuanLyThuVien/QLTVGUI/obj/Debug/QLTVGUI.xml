@@ -57,6 +57,11 @@ QLTVGUI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:QLTVGUI.My.Resources.Resources.Account_card">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:QLTVGUI.My.Resources.Resources.add_circle_black_48x48">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

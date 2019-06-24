@@ -7,8 +7,8 @@ Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 
 Public Class ucBaoCaoSachTre
-    Dim tsBus As New ThamSoBus
-    Dim sachBus As New SachBUS
+    Dim tsBus As New ThamSoBUS
+    Dim sachBus As New DauSachBUS
     Dim thoigian As New DateTime
     Dim result As New Result
 
@@ -34,7 +34,7 @@ Public Class ucBaoCaoSachTre
             Return
         End If
 
-        result = sachBus.selectSachTre(thoigian, thamso.ThoiGianMuonToiDa, listten, listngay)
+        'result = DauSachBUS.selectSachTre(thoigian, thamso.HanMuonSach, listten, listngay)
 
         If result.FlagResult = False Then
             MessageBox.Show("Lỗi truy xuất dữ liệu. Lập thống kê thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -79,17 +79,17 @@ Public Class ucBaoCaoSachTre
         grgrpar.Controls.Clear()
         Dim grgrgrpar = New frmHome
         grgrgrpar = grgrpar.Parent
-        grgrgrpar.btnLapTheDocGia.selected = False
+        grgrgrpar.btnNguoiDung.selected = False
         Dim ucThuVien As New ucThuVien
         grgrpar.Controls.Add(ucThuVien)
 
-        grgrgrpar.btnLapTheDocGia.selected = False
-        grgrgrpar.btnTiepNhanSachMoi.selected = False
-        grgrgrpar.btnTraCuuSach.selected = False
-        grgrgrpar.btnChoMuonSach.selected = False
-        grgrgrpar.btnNhanTraSach.selected = False
-        grgrgrpar.btnLapBaoCao.selected = False
-        grgrgrpar.btnThayDoiQuyDinh.selected = False
+        'grgrgrpar.btnNguoiDung.selected = False
+        'grgrgrpar.btnTiepNhanSachMoi.selected = False
+        'grgrgrpar.btnTraCuu.selected = False
+        'grgrgrpar.btnQuanLyDocGia.selected = False
+        'grgrgrpar.btnNhanTraSach.selected = False
+        'grgrgrpar.btnBaoCao.selected = False
+        'grgrgrpar.btnDangXuat.selected = False
     End Sub
 
     Private Sub ucBaoCaoSachTre_Load(sender As Object, e As EventArgs) Handles MyBase.Load

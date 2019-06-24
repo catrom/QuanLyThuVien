@@ -94,7 +94,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
     <Compile Include="frmHome.Designer.vb">
       <DependentUpon>frmHome.vb</DependentUpon>
     </Compile>
@@ -140,18 +139,6 @@
     <Compile Include="ucBaoCaoSachTre.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucCapNhatThongTin.Designer.vb">
-      <DependentUpon>ucCapNhatThongTin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucCapNhatThongTin.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucThongTinDocGia.Designer.vb">
-      <DependentUpon>ucThongTinDocGia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucThongTinDocGia.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ucChoMuonSach.Designer.vb">
       <DependentUpon>ucChoMuonSach.vb</DependentUpon>
     </Compile>
@@ -180,6 +167,18 @@
       <DependentUpon>ucThayDoiQuyDinh.vb</DependentUpon>
     </Compile>
     <Compile Include="ucThayDoiQuyDinh.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThemNguoiDung.Designer.vb">
+      <DependentUpon>ucThemNguoiDung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucThemNguoiDung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThongTinNguoiDung.Designer.vb">
+      <DependentUpon>ucThongTinNguoiDung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucThongTinNguoiDung.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucThuVien.Designer.vb">
@@ -229,12 +228,6 @@
     <EmbeddedResource Include="ucBaoCaoSachTre.resx">
       <DependentUpon>ucBaoCaoSachTre.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucCapNhatThongTin.resx">
-      <DependentUpon>ucCapNhatThongTin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucThongTinDocGia.resx">
-      <DependentUpon>ucThongTinDocGia.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucChoMuonSach.resx">
       <DependentUpon>ucChoMuonSach.vb</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucThayDoiQuyDinh.resx">
       <DependentUpon>ucThayDoiQuyDinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucThemNguoiDung.resx">
+      <DependentUpon>ucThemNguoiDung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucThongTinNguoiDung.resx">
+      <DependentUpon>ucThongTinNguoiDung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucThuVien.resx">
       <DependentUpon>ucThuVien.vb</DependentUpon>
@@ -465,6 +464,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-update-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account_card.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

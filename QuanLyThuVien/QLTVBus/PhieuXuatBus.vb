@@ -2,7 +2,7 @@
 Imports QLTVDTO
 Imports Utility
 
-Public Class PhieuXuatBus
+Public Class PhieuXuatBUS
     Private px As PhieuXuatDAL
     Public Sub New()
         px = New PhieuXuatDAL()

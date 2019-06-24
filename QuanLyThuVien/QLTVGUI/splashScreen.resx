@@ -124,10 +124,8 @@
   <data name="BunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVChTjc+hEkRgGIXhL2mSRJIkkkQhSSRJIkkUkkSS
-        JJJEktzjuyvszP5lZ88FPHNeeQ9d1zFNE8dx8H2fOI5J05SiKKjrmr7vEU3TMAwD27ZxXZcgCEiShDzP
-        KcuSpmkYhgF5NMuyFC3LMkWbpgn5R5vnGfn+FkWR8q3rOsZxZFkW5NE8z1O0qqoUbds25FfpR9v3HXm0
-        MAwVrW1bRTvPE/lHu64L+VW6rivHcXDfNy9MJ8hfXcRxZgAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA+SURBVChTjcOhEQAwCAPA7D8YCoVDoXAoFC4dofm7B0W4
+        Oyqxu1RiZqhEd1OJqqISmUklIoJKuDuVMDP+Gx/XWWzAOfMINwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnDocGia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -141,19 +139,6 @@
         3PxJjM5BoKZxuO2X53snAPWcrrjnnYNAQfm7Bcfh5hdSxVX3R+8koJbY6pvjcLNY8U3vJKCOGO3XNtmx
         YRjO8qsxeicDJRy637kcBy4mJwJF5Kc/baoP85IZ6oldfmoTfbz8eMjNKijh8Nsr7bR8zxsP+jx5EuD5
         /N1fMeiVt57jCTYhfywS+M9irFf5xwnaBCVJkiRJkqRKLRa/APyh/+ntB2lLAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAApCAYAAADDJIzmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVHhe7ZqtUsNAFEYjkUgkEoms5BEqcUGlyZpUIvMW
-        SB4DiUQiK5FIZCTcm9zJQHrLb7LZYc6ZOTOd7o+4Xze7TZIBAAAAwFIURXG22WwuxKuqqhr8mVo3rV8I
-        4dxK+jvKstzKhDvxFSfzSWzyPD+yMn+NrggZ9PBuEpzenfzgV1byw9hlqR0NxpmUUK6t9PvYyiCMyOr+
-        YhF8RBq5TC2gBPJc1/WxxdBjG7g7AOdX6n9rUfTIl7r7u50xiu2wSvR87HTA+K67QGS5XDqNGNnhxMX+
-        kYxNF4h+GDXgMhJIYhJIYhJIYhJIYhJIYhJIYhJIYvaB6D9EpxHj2wdiD6W8DhjXYYWsnEaMrN5T7ALR
-        B+6ySl68ThhPyeC0C0SRdG68ThhHCePRougJIZzoo0SvM85u676zJQ3rUUeMoJ5yLYJ9uHTFVep9Z6U/
-        jB6D2eRnt/10ZYzRPUUG3Y8mwWn83luLHnoUkwlKUW+v4B+UELb6MqKVFgAAAP4vWfYGjQyE0ARuBvIA
-        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnDangNhap.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

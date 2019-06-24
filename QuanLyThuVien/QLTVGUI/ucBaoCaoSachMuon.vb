@@ -10,7 +10,7 @@ Public Class ucBaoCaoSachMuon
     Dim month = 0
     Dim year = 0
     Dim result As New Result
-    Dim ctpmBus As New ChiTietPhieuMuonBus
+    Dim ctpmBus As New ChiTietPhieuMuonBUS
 
     Private Sub btnThongKe_Click(sender As Object, e As EventArgs) Handles btnThongKe.Click
 
@@ -115,17 +115,17 @@ Public Class ucBaoCaoSachMuon
         grgrpar.Controls.Clear()
         Dim grgrgrpar = New frmHome
         grgrgrpar = grgrpar.Parent
-        grgrgrpar.btnLapTheDocGia.selected = False
+        grgrgrpar.btnNguoiDung.selected = False
         Dim ucThuVien As New ucThuVien
         grgrpar.Controls.Add(ucThuVien)
 
-        grgrgrpar.btnLapTheDocGia.selected = False
-        grgrgrpar.btnTiepNhanSachMoi.selected = False
-        grgrgrpar.btnTraCuuSach.selected = False
-        grgrgrpar.btnChoMuonSach.selected = False
-        grgrgrpar.btnNhanTraSach.selected = False
-        grgrgrpar.btnLapBaoCao.selected = False
-        grgrgrpar.btnThayDoiQuyDinh.selected = False
+        'grgrgrpar.btnNguoiDung.selected = False
+        'grgrgrpar.btnTiepNhanSachMoi.selected = False
+        'grgrgrpar.btnTraCuu.selected = False
+        'grgrgrpar.btnQuanLyDocGia.selected = False
+        'grgrgrpar.btnNhanTraSach.selected = False
+        'grgrgrpar.btnBaoCao.selected = False
+        'grgrgrpar.btnDangXuat.selected = False
     End Sub
 
     Private Sub ucBaoCaoSachMuon_Load(sender As Object, e As EventArgs) Handles MyBase.Load

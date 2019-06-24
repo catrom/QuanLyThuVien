@@ -2,7 +2,7 @@
 Imports QLTVDTO
 Imports Utility
 
-Public Class PhieuMuonBus
+Public Class PhieuMuonBUS
     Private pms As PhieuMuonDAL
     Public Sub New()
         pms = New PhieuMuonDAL()
@@ -15,8 +15,8 @@ Public Class PhieuMuonBus
         Return pms.build_maphieumuon(nextMaPhieuMuon)
     End Function
 
-    Public Function insert(pms As PhieuMuonDTO) As Result
-        Return pms.insert(pms)
+    Public Function insert(value As PhieuMuonDTO) As Result
+        Return pms.insert(value)
     End Function
 
     Public Function selectALL(ByRef listPhieuMuon As List(Of PhieuMuonDTO)) As Result

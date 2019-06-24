@@ -1,76 +1,74 @@
 ﻿Public Class ThamSoDTO
     Private iTuoiToiThieu As Integer
-    Private iTuoiToiDa As Integer
-    Private iHanSuDung As Integer
-    Private iNamXuatBanToiThieu As Integer
-    Private iSoLuongSachMuonToiDa As Integer
-    Private iThoiGianMuonToiDa As Integer
+    Private iSoSachMuonToiDa As Integer
+    Private iSoSachMuonToiDa1Lan As Integer
+    Private iHanMuonSach As Integer
+    Private iMucGiaPhat As Integer
+    Private iMucGiaCoBan As Integer
 
     Public Sub New()
-
     End Sub
 
-    Public Sub New(iTuoiToiThieu As Integer, iTuoiToiDa As Integer, iHanSuDung As Integer, iNamXuatBanToiThieu As Integer, iSoLuongSachMuonToiDa As Integer, iThoiGianMuonToiDa As Integer)
+    Public Sub New(iTuoiToiThieu As Integer, iSoSachMuonToiDa As Integer, iSoSachMuonToiDa1Lan As Integer, iHanMuonSach As Integer, iMucGiaPhat As Integer, iMucGiaCoBan As Integer)
         Me.iTuoiToiThieu = iTuoiToiThieu
-        Me.iTuoiToiDa = iTuoiToiDa
-        Me.iHanSuDung = iHanSuDung
-        Me.iNamXuatBanToiThieu = iNamXuatBanToiThieu
-        Me.iSoLuongSachMuonToiDa = iSoLuongSachMuonToiDa
-        Me.iThoiGianMuonToiDa = iThoiGianMuonToiDa
-
+        Me.iSoSachMuonToiDa = iSoSachMuonToiDa
+        Me.iSoSachMuonToiDa1Lan = iSoSachMuonToiDa1Lan
+        Me.iHanMuonSach = iHanMuonSach
+        Me.iMucGiaPhat = iMucGiaPhat
+        Me.iMucGiaCoBan = iMucGiaCoBan
     End Sub
 
-    Property TuoiToiThieu() As Integer
+    Public Property TuoiToiThieu As Integer
         Get
             Return iTuoiToiThieu
         End Get
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             iTuoiToiThieu = value
         End Set
     End Property
 
-    Property TuoiToiDa() As Integer
+    Public Property SoSachMuonToiDa As Integer
         Get
-            Return iTuoiToiDa
+            Return iSoSachMuonToiDa
         End Get
-        Set(ByVal value As Integer)
-            iTuoiToiDa = value
+        Set(value As Integer)
+            iSoSachMuonToiDa = value
         End Set
     End Property
 
-    Property HanSuDung() As Integer
+    Public Property SoSachMuonToiDa1Lan As Integer
         Get
-            Return iHanSuDung
+            Return iSoSachMuonToiDa1Lan
         End Get
-        Set(ByVal value As Integer)
-            iHanSuDung = value
+        Set(value As Integer)
+            iSoSachMuonToiDa1Lan = value
         End Set
     End Property
 
-    Property NamXuatBanToiThieu() As Integer
+    Public Property HanMuonSach As Integer
         Get
-            Return iNamXuatBanToiThieu
+            Return iHanMuonSach
         End Get
-        Set(ByVal value As Integer)
-            iNamXuatBanToiThieu = value
+        Set(value As Integer)
+            iHanMuonSach = value
         End Set
     End Property
 
-    Property SoLuongSachMuonToiDa() As Integer
+    Public Property MucGiaPhat As Integer
         Get
-            Return iSoLuongSachMuonToiDa
+            Return iMucGiaPhat
         End Get
-        Set(ByVal value As Integer)
-            iSoLuongSachMuonToiDa = value
+        Set(value As Integer)
+            iMucGiaPhat = value
         End Set
     End Property
 
-    Property ThoiGianMuonToiDa() As Integer
+    Public Property MucGiaCoBan As Integer
         Get
-            Return iThoiGianMuonToiDa
+            Return iMucGiaCoBan
         End Get
-        Set(ByVal value As Integer)
-            iThoiGianMuonToiDa = value
+        Set(value As Integer)
+            iMucGiaCoBan = value
         End Set
     End Property
 End Class

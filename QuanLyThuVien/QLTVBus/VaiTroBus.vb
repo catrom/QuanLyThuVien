@@ -20,6 +20,10 @@ Public Class VaiTroBUS
         Return vt.selectALL(listTT)
     End Function
 
+    Public Function getByMaVaiTro(mavaitro As String, ByRef value As VaiTroDTO) As Result
+        Return vt.getByMaVaiTro(mavaitro, value)
+    End Function
+
     Public Function insert(value As VaiTroDTO) As Result
         Return vt.insert(value)
     End Function

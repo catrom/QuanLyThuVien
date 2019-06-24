@@ -70,8 +70,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietPhieuMuonBus.vb" />
-    <Compile Include="ChiTietPhieuNhapBUS.vb" />
+    <Compile Include="BaoCaoBUS.vb" />
+    <Compile Include="ChiTietPhieuMuonBUS.vb" />
+    <Compile Include="ChiTietPhieuNhapBus.vb" />
     <Compile Include="ChiTietPhieuTraBUS.vb" />
     <Compile Include="ChiTietPhieuXuatBUS.vb" />
     <Compile Include="CuonSachBUS.vb" />
@@ -80,8 +81,6 @@
     <Compile Include="DauSach_NgonNguBUS.vb" />
     <Compile Include="DauSach_TacGiaBUS.vb" />
     <Compile Include="DauSach_TheLoaiBUS.vb" />
-    <Compile Include="DocGiaBus.vb" />
-    <Compile Include="LoaiDocGiaBus.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,15 +96,15 @@
     <Compile Include="NhaCungCapBUS.vb" />
     <Compile Include="NhaThanhLyBUS.vb" />
     <Compile Include="NhaXuatBanBUS.vb" />
-    <Compile Include="PhieuMuonBus.vb" />
-    <Compile Include="PhieuNhapBus.vb" />
+    <Compile Include="PhieuMuonBUS.vb" />
+    <Compile Include="PhieuNhapBUS.vb" />
     <Compile Include="PhieuTraBUS.vb" />
-    <Compile Include="PhieuXuatBus.vb" />
+    <Compile Include="PhieuXuatBUS.vb" />
     <Compile Include="TacGiaBUS.vb" />
-    <Compile Include="ThamSoBus.vb" />
+    <Compile Include="ThamSoBUS.vb" />
     <Compile Include="TheLoaiBUS.vb" />
     <Compile Include="TinhTrangBUS.vb" />
-    <Compile Include="VaiTroBus.vb" />
+    <Compile Include="VaiTroBUS.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

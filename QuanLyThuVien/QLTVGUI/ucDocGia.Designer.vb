@@ -38,7 +38,7 @@ Partial Class ucDocGia
         Me.btnThemDocGia.ImagePosition = 17
         Me.btnThemDocGia.ImageZoom = 50
         Me.btnThemDocGia.LabelPosition = 34
-        Me.btnThemDocGia.LabelText = "Lập thẻ đôc giả"
+        Me.btnThemDocGia.LabelText = "Lập thẻ độc giả"
         Me.btnThemDocGia.Location = New System.Drawing.Point(268, 91)
         Me.btnThemDocGia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemDocGia.Name = "btnThemDocGia"
@@ -57,7 +57,7 @@ Partial Class ucDocGia
         Me.btnTimDocGia.ImagePosition = 17
         Me.btnTimDocGia.ImageZoom = 50
         Me.btnTimDocGia.LabelPosition = 34
-        Me.btnTimDocGia.LabelText = "Tìm đôc giả"
+        Me.btnTimDocGia.LabelText = "Tìm độc giả"
         Me.btnTimDocGia.Location = New System.Drawing.Point(268, 283)
         Me.btnTimDocGia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnTimDocGia.Name = "btnTimDocGia"

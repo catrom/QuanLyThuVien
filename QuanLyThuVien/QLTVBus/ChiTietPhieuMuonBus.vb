@@ -2,7 +2,7 @@
 Imports QLTVDTO
 Imports Utility
 
-Public Class ChiTietPhieuMuonBus
+Public Class ChiTietPhieuMuonBUS
     Private ctpmDAL As ChiTietPhieuMuonDAL
 
     Public Sub New()

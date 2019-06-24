@@ -18,7 +18,7 @@ Public Class ThamSoDAL
     Public Function selectALL(ByRef thamso As ThamSoDTO) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [tuoitoithieu], [tuoitoida], [hansudung], [namxuatbantoithieu], [soluongsachmuontoida], [thoigianmuontoida]"
+        query &= " SELECT * "
         query &= " FROM [tblThamSo]"
 
 
@@ -35,8 +35,8 @@ Public Class ThamSoDAL
                     reader = comm.ExecuteReader()
                     If reader.HasRows = True Then
                         While reader.Read()
-                            thamso = New ThamSoDTO(reader("tuoitoithieu"), reader("tuoitoida"), reader("hansudung"), reader("namxuatbantoithieu"),
-                                                   reader("soluongsachmuontoida"), reader("thoigianmuontoida"))
+                            thamso = New ThamSoDTO(reader("tuoitoithieu"), reader("sosachmuontoida"), reader("sosanhmuontoida1lan"), reader("hanmuonsach"),
+                                                   reader("mucgiaphat"), reader("mucgiacoban"))
                         End While
                     End If
                 Catch ex As Exception
@@ -54,11 +54,11 @@ Public Class ThamSoDAL
         Dim query As String = String.Empty
         query &= " UPDATE [tblThamSo] SET"
         query &= " [tuoitoithieu] = @tuoitoithieu "
-        query &= " ,[tuoitoida] = @tuoitoida "
-        query &= " ,[hansudung] = @hansudung "
-        query &= " ,[namxuatbantoithieu] = @namxuatbantoithieu "
-        query &= " ,[soluongsachmuontoida] = @soluongsachmuontoida "
-        query &= " ,[thoigianmuontoida] = @thoigianmuontoida "
+        query &= " ,[sosachmuontoida] = @sosachmuontoida "
+        query &= " ,[sosachmuontoida1lan] = @sosachmuontoida1lan "
+        query &= " ,[hanmuonsach] = @hanmuonsach "
+        query &= " ,[mucgiaphat] = @mucgiaphat "
+        query &= " ,[mucgiacoban] = @mucgiacoban "
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
@@ -67,11 +67,11 @@ Public Class ThamSoDAL
                     .CommandType = CommandType.Text
                     .CommandText = query
                     .Parameters.AddWithValue("@tuoitoithieu", thamso.TuoiToiThieu)
-                    .Parameters.AddWithValue("@tuoitoida", thamso.TuoiToiDa)
-                    .Parameters.AddWithValue("@hansudung", thamso.HanSuDung)
-                    .Parameters.AddWithValue("@namxuatbantoithieu", thamso.NamXuatBanToiThieu)
-                    .Parameters.AddWithValue("@soluongsachmuontoida", thamso.SoLuongSachMuonToiDa)
-                    .Parameters.AddWithValue("@thoigianmuontoida", thamso.ThoiGianMuonToiDa)
+                    .Parameters.AddWithValue("@sosachmuontoida", thamso.SoSachMuonToiDa)
+                    .Parameters.AddWithValue("@sosachmuontoida1lan", thamso.SoSachMuonToiDa1Lan)
+                    .Parameters.AddWithValue("@hanmuonsach", thamso.HanMuonSach)
+                    .Parameters.AddWithValue("@mucgiaphat", thamso.MucGiaPhat)
+                    .Parameters.AddWithValue("@mucgiacoban", thamso.MucGiaCoBan)
                 End With
                 Try
                     conn.Open()
@@ -85,102 +85,5 @@ Public Class ThamSoDAL
             End Using
         End Using
         Return New Result(True) ' thanh cong
-    End Function
-
-    Public Function getSoNgayMuonToiDa(ByRef songay As Integer) As Result
-
-        Dim query As String = String.Empty
-        query &= " SELECT [thoigianmuontoida]"
-        query &= " FROM [tblThamSo]"
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                End With
-                Try
-                    conn.Open()
-                    Dim reader As SqlDataReader
-                    reader = comm.ExecuteReader()
-                    If reader.HasRows = True Then
-                        While reader.Read()
-                            songay = reader("thoigianmuontoida")
-                        End While
-                    End If
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    Return New Result(False)
-                End Try
-            End Using
-        End Using
-        Return New Result(True)
-    End Function
-
-    Public Function getSoSachMuonToiDa(ByRef sosach As Integer) As Result
-
-        Dim query As String = String.Empty
-        query &= " SELECT [soluongsachmuontoida]"
-        query &= " FROM [tblThamSo]"
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                End With
-                Try
-                    conn.Open()
-                    Dim reader As SqlDataReader
-                    reader = comm.ExecuteReader()
-                    If reader.HasRows = True Then
-                        While reader.Read()
-                            sosach = reader("soluongsachmuontoida")
-                        End While
-                    End If
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    Return New Result(False)
-                End Try
-            End Using
-        End Using
-        Return New Result(True)
-    End Function
-
-    Public Function getHanSuDung(ByRef hansudung As Integer) As Result
-
-        Dim query As String = String.Empty
-        query &= " SELECT [hansudung]"
-        query &= " FROM [tblThamSo]"
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                End With
-                Try
-                    conn.Open()
-                    Dim reader As SqlDataReader
-                    reader = comm.ExecuteReader()
-                    If reader.HasRows = True Then
-                        While reader.Read()
-                            hansudung = reader("hansudung")
-                        End While
-                    End If
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    Return New Result(False)
-                End Try
-            End Using
-        End Using
-        Return New Result(True)
-
     End Function
 End Class
