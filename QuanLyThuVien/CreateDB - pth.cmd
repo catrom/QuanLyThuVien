@@ -1,0 +1,1 @@
+SQLCMD -S ADMIN\SQLEXPRESS -E -i CreateDB.sql
