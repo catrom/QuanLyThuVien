@@ -332,9 +332,7 @@ Public Class NguoiDungDAL
 
         Dim query As String = String.Empty
         query &= " UPDATE [tblNguoiDung] SET"
-        query &= " [gioitinh] = @gioitinh "
-        query &= " ,[ngaysinh] = @ngaysinh "
-        query &= " ,[diachi] = @diachi "
+        query &= " [diachi] = @diachi "
         query &= " ,[email] = @email "
         query &= " ,[sodienthoai] = @sodienthoai "
         query &= " ,[vaitro] = @vaitro "
@@ -347,12 +345,11 @@ Public Class NguoiDungDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@gioitinh", nd.GioiTinh)
-                    .Parameters.AddWithValue("@ngaysinh", nd.NgaySinh)
                     .Parameters.AddWithValue("@diachi", nd.DiaChi)
                     .Parameters.AddWithValue("@email", nd.Email)
                     .Parameters.AddWithValue("@sodienthoai", nd.SoDienThoai)
                     .Parameters.AddWithValue("@vaitro", nd.VaiTro)
+                    .Parameters.AddWithValue("@manguoidung", nd.MaNguoiDung)
                 End With
                 Try
                     conn.Open()

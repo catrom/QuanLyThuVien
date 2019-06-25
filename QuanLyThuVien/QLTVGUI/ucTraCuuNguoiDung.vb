@@ -93,4 +93,29 @@ Public Class ucTraCuuNguoiDung
             lbGioiTinh.Text = "Nữ"
         End If
     End Sub
+
+    Private Sub dgDanhSach_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgDanhSach.RowHeaderMouseClick
+        Me.Height = 700
+
+        Dim ngClick = timkiem.ElementAt(e.RowIndex)
+        lbMaNguoiDung.Text = ngClick.MaNguoiDung
+        lbHoTen.Text = ngClick.HoTen
+        lbNgaySinh.Text = ngClick.NgaySinh.ToString("dd/MM/yyyy")
+        lbCMND.Text = ngClick.CMND
+        lbDiaChi.Text = ngClick.DiaChi
+        lbEmail.Text = ngClick.Email
+        lbSoDienThoai.Text = ngClick.SoDienThoai
+        lbNgayTao.Text = ngClick.NgayTao.ToString("dd/MM/yyyy")
+
+        Dim ngVaiTro As New VaiTroDTO
+        vaitroBus.getByMaVaiTro(ngClick.VaiTro, ngVaiTro)
+
+        lbVaiTro.Text = ngVaiTro.TenVaiTro
+
+        If ngClick.GioiTinh = False Then
+            lbGioiTinh.Text = "Nam"
+        Else
+            lbGioiTinh.Text = "Nữ"
+        End If
+    End Sub
 End Class

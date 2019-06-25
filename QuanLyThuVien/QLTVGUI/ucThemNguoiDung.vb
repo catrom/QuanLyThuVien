@@ -48,7 +48,8 @@ Public Class ucThemNguoiDung
 
         Dim res = nguoidungBus.insert(nguoidung)
         If res.FlagResult = False Then
-            MessageBox.Show("Lưu người dùng thất bại!\n" + res.SystemMessage, "Lỗi", MessageBoxButtons.OK)
+            Dim mes = "Lưu người dùng thất bại!" + "\n" + res.SystemMessage
+            MessageBox.Show(mes, "Lỗi", MessageBoxButtons.OK)
         Else
             MessageBox.Show("Lưu người dùng thành công!", "Thông tin", MessageBoxButtons.OK)
         End If

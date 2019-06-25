@@ -24,6 +24,10 @@ Partial Class ucChinhSuaNguoiDung
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cbVaiTro = New System.Windows.Forms.ComboBox()
+        Me.tbSoDienThoai = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.tbEmail = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.tbDiaChi = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.lbNgayTao = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lbCMND = New System.Windows.Forms.Label()
@@ -40,14 +44,22 @@ Partial Class ucChinhSuaNguoiDung
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.tbSoDienThoai = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.tbEmail = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.tbDiaChi = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.cbVaiTro = New System.Windows.Forms.ComboBox()
+        Me.gbDangNhap = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.tbNhapLaiMatKhauMoi = New System.Windows.Forms.TextBox()
+        Me.tbMatKhauMoi = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.tbMatKhau = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.tbTenDangNhap = New System.Windows.Forms.TextBox()
+        Me.lbDoiMatKhau = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnLuu = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnThoat = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox2.SuspendLayout()
+        Me.gbDangNhap.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,6 +104,82 @@ Partial Class ucChinhSuaNguoiDung
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Thông tin cá nhân"
+        '
+        'cbVaiTro
+        '
+        Me.cbVaiTro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbVaiTro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbVaiTro.DropDownHeight = 100
+        Me.cbVaiTro.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.cbVaiTro.FormattingEnabled = True
+        Me.cbVaiTro.IntegralHeight = False
+        Me.cbVaiTro.Location = New System.Drawing.Point(110, 377)
+        Me.cbVaiTro.Name = "cbVaiTro"
+        Me.cbVaiTro.Size = New System.Drawing.Size(250, 29)
+        Me.cbVaiTro.TabIndex = 29
+        '
+        'tbSoDienThoai
+        '
+        Me.tbSoDienThoai.AutoSize = True
+        Me.tbSoDienThoai.BackColor = System.Drawing.Color.White
+        Me.tbSoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbSoDienThoai.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.tbSoDienThoai.ForeColor = System.Drawing.Color.Black
+        Me.tbSoDienThoai.HintForeColor = System.Drawing.Color.Empty
+        Me.tbSoDienThoai.HintText = ""
+        Me.tbSoDienThoai.isPassword = False
+        Me.tbSoDienThoai.LineFocusedColor = System.Drawing.Color.Gray
+        Me.tbSoDienThoai.LineIdleColor = System.Drawing.Color.Silver
+        Me.tbSoDienThoai.LineMouseHoverColor = System.Drawing.Color.Gray
+        Me.tbSoDienThoai.LineThickness = 2
+        Me.tbSoDienThoai.Location = New System.Drawing.Point(110, 337)
+        Me.tbSoDienThoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tbSoDienThoai.Name = "tbSoDienThoai"
+        Me.tbSoDienThoai.Size = New System.Drawing.Size(250, 36)
+        Me.tbSoDienThoai.TabIndex = 26
+        Me.tbSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'tbEmail
+        '
+        Me.tbEmail.AutoSize = True
+        Me.tbEmail.BackColor = System.Drawing.Color.White
+        Me.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbEmail.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.tbEmail.ForeColor = System.Drawing.Color.Black
+        Me.tbEmail.HintForeColor = System.Drawing.Color.Empty
+        Me.tbEmail.HintText = ""
+        Me.tbEmail.isPassword = False
+        Me.tbEmail.LineFocusedColor = System.Drawing.Color.Gray
+        Me.tbEmail.LineIdleColor = System.Drawing.Color.Silver
+        Me.tbEmail.LineMouseHoverColor = System.Drawing.Color.Gray
+        Me.tbEmail.LineThickness = 2
+        Me.tbEmail.Location = New System.Drawing.Point(110, 297)
+        Me.tbEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tbEmail.Name = "tbEmail"
+        Me.tbEmail.Size = New System.Drawing.Size(250, 36)
+        Me.tbEmail.TabIndex = 27
+        Me.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'tbDiaChi
+        '
+        Me.tbDiaChi.AutoSize = True
+        Me.tbDiaChi.BackColor = System.Drawing.Color.White
+        Me.tbDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.tbDiaChi.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.tbDiaChi.ForeColor = System.Drawing.Color.Black
+        Me.tbDiaChi.HintForeColor = System.Drawing.Color.Empty
+        Me.tbDiaChi.HintText = ""
+        Me.tbDiaChi.isPassword = False
+        Me.tbDiaChi.LineFocusedColor = System.Drawing.Color.Gray
+        Me.tbDiaChi.LineIdleColor = System.Drawing.Color.Silver
+        Me.tbDiaChi.LineMouseHoverColor = System.Drawing.Color.Gray
+        Me.tbDiaChi.LineThickness = 2
+        Me.tbDiaChi.Location = New System.Drawing.Point(110, 257)
+        Me.tbDiaChi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tbDiaChi.Name = "tbDiaChi"
+        Me.tbDiaChi.Size = New System.Drawing.Size(250, 36)
+        Me.tbDiaChi.TabIndex = 28
+        Me.tbDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'lbNgayTao
         '
@@ -274,91 +362,141 @@ Partial Class ucChinhSuaNguoiDung
         Me.Label10.TabIndex = 4
         Me.Label10.Text = "Mã người dùng:"
         '
-        'GroupBox1
+        'gbDangNhap
         '
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(410, 54)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(273, 248)
-        Me.GroupBox1.TabIndex = 27
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Đăng nhập"
+        Me.gbDangNhap.Controls.Add(Me.GroupBox3)
+        Me.gbDangNhap.Controls.Add(Me.tbTenDangNhap)
+        Me.gbDangNhap.Controls.Add(Me.lbDoiMatKhau)
+        Me.gbDangNhap.Controls.Add(Me.Label5)
+        Me.gbDangNhap.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbDangNhap.Location = New System.Drawing.Point(410, 54)
+        Me.gbDangNhap.Name = "gbDangNhap"
+        Me.gbDangNhap.Size = New System.Drawing.Size(273, 373)
+        Me.gbDangNhap.TabIndex = 27
+        Me.gbDangNhap.TabStop = False
+        Me.gbDangNhap.Text = "Đăng nhập"
         '
-        'tbSoDienThoai
+        'GroupBox3
         '
-        Me.tbSoDienThoai.AutoSize = True
-        Me.tbSoDienThoai.BackColor = System.Drawing.Color.White
-        Me.tbSoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbSoDienThoai.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.tbSoDienThoai.ForeColor = System.Drawing.Color.Black
-        Me.tbSoDienThoai.HintForeColor = System.Drawing.Color.Empty
-        Me.tbSoDienThoai.HintText = ""
-        Me.tbSoDienThoai.isPassword = False
-        Me.tbSoDienThoai.LineFocusedColor = System.Drawing.Color.Gray
-        Me.tbSoDienThoai.LineIdleColor = System.Drawing.Color.Silver
-        Me.tbSoDienThoai.LineMouseHoverColor = System.Drawing.Color.Gray
-        Me.tbSoDienThoai.LineThickness = 2
-        Me.tbSoDienThoai.Location = New System.Drawing.Point(110, 337)
-        Me.tbSoDienThoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tbSoDienThoai.Name = "tbSoDienThoai"
-        Me.tbSoDienThoai.Size = New System.Drawing.Size(250, 36)
-        Me.tbSoDienThoai.TabIndex = 26
-        Me.tbSoDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.GroupBox3.Controls.Add(Me.tbNhapLaiMatKhauMoi)
+        Me.GroupBox3.Controls.Add(Me.tbMatKhauMoi)
+        Me.GroupBox3.Controls.Add(Me.Label15)
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Controls.Add(Me.tbMatKhau)
+        Me.GroupBox3.Controls.Add(Me.Label13)
+        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.ForeColor = System.Drawing.Color.Blue
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 131)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(261, 233)
+        Me.GroupBox3.TabIndex = 32
+        Me.GroupBox3.TabStop = False
         '
-        'tbEmail
+        'tbNhapLaiMatKhauMoi
         '
-        Me.tbEmail.AutoSize = True
-        Me.tbEmail.BackColor = System.Drawing.Color.White
-        Me.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbEmail.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.tbEmail.ForeColor = System.Drawing.Color.Black
-        Me.tbEmail.HintForeColor = System.Drawing.Color.Empty
-        Me.tbEmail.HintText = ""
-        Me.tbEmail.isPassword = False
-        Me.tbEmail.LineFocusedColor = System.Drawing.Color.Gray
-        Me.tbEmail.LineIdleColor = System.Drawing.Color.Silver
-        Me.tbEmail.LineMouseHoverColor = System.Drawing.Color.Gray
-        Me.tbEmail.LineThickness = 2
-        Me.tbEmail.Location = New System.Drawing.Point(110, 297)
-        Me.tbEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tbEmail.Name = "tbEmail"
-        Me.tbEmail.Size = New System.Drawing.Size(250, 36)
-        Me.tbEmail.TabIndex = 27
-        Me.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.tbNhapLaiMatKhauMoi.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbNhapLaiMatKhauMoi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbNhapLaiMatKhauMoi.Location = New System.Drawing.Point(16, 185)
+        Me.tbNhapLaiMatKhauMoi.MaxLength = 8
+        Me.tbNhapLaiMatKhauMoi.Name = "tbNhapLaiMatKhauMoi"
+        Me.tbNhapLaiMatKhauMoi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbNhapLaiMatKhauMoi.Size = New System.Drawing.Size(229, 29)
+        Me.tbNhapLaiMatKhauMoi.TabIndex = 33
+        Me.tbNhapLaiMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'tbDiaChi
+        'tbMatKhauMoi
         '
-        Me.tbDiaChi.AutoSize = True
-        Me.tbDiaChi.BackColor = System.Drawing.Color.White
-        Me.tbDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbDiaChi.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.tbDiaChi.ForeColor = System.Drawing.Color.Black
-        Me.tbDiaChi.HintForeColor = System.Drawing.Color.Empty
-        Me.tbDiaChi.HintText = ""
-        Me.tbDiaChi.isPassword = False
-        Me.tbDiaChi.LineFocusedColor = System.Drawing.Color.Gray
-        Me.tbDiaChi.LineIdleColor = System.Drawing.Color.Silver
-        Me.tbDiaChi.LineMouseHoverColor = System.Drawing.Color.Gray
-        Me.tbDiaChi.LineThickness = 2
-        Me.tbDiaChi.Location = New System.Drawing.Point(110, 257)
-        Me.tbDiaChi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tbDiaChi.Name = "tbDiaChi"
-        Me.tbDiaChi.Size = New System.Drawing.Size(250, 36)
-        Me.tbDiaChi.TabIndex = 28
-        Me.tbDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.tbMatKhauMoi.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbMatKhauMoi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbMatKhauMoi.Location = New System.Drawing.Point(16, 119)
+        Me.tbMatKhauMoi.MaxLength = 8
+        Me.tbMatKhauMoi.Name = "tbMatKhauMoi"
+        Me.tbMatKhauMoi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbMatKhauMoi.Size = New System.Drawing.Size(229, 29)
+        Me.tbMatKhauMoi.TabIndex = 34
+        Me.tbMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'cbVaiTro
+        'Label15
         '
-        Me.cbVaiTro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cbVaiTro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cbVaiTro.DropDownHeight = 100
-        Me.cbVaiTro.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cbVaiTro.FormattingEnabled = True
-        Me.cbVaiTro.IntegralHeight = False
-        Me.cbVaiTro.Location = New System.Drawing.Point(110, 377)
-        Me.cbVaiTro.Name = "cbVaiTro"
-        Me.cbVaiTro.Size = New System.Drawing.Size(250, 29)
-        Me.cbVaiTro.TabIndex = 29
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(0, 156)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(118, 21)
+        Me.Label15.TabIndex = 30
+        Me.Label15.Text = "Mật khẩu mới *"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.Black
+        Me.Label14.Location = New System.Drawing.Point(0, 90)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(118, 21)
+        Me.Label14.TabIndex = 31
+        Me.Label14.Text = "Mật khẩu mới *"
+        '
+        'tbMatKhau
+        '
+        Me.tbMatKhau.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbMatKhau.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbMatKhau.Location = New System.Drawing.Point(16, 53)
+        Me.tbMatKhau.MaxLength = 8
+        Me.tbMatKhau.Name = "tbMatKhau"
+        Me.tbMatKhau.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.tbMatKhau.Size = New System.Drawing.Size(229, 29)
+        Me.tbMatKhau.TabIndex = 35
+        Me.tbMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(0, 24)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(106, 21)
+        Me.Label13.TabIndex = 32
+        Me.Label13.Text = "Mật khẩu cũ *"
+        '
+        'tbTenDangNhap
+        '
+        Me.tbTenDangNhap.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tbTenDangNhap.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTenDangNhap.Location = New System.Drawing.Point(22, 65)
+        Me.tbTenDangNhap.Name = "tbTenDangNhap"
+        Me.tbTenDangNhap.Size = New System.Drawing.Size(229, 29)
+        Me.tbTenDangNhap.TabIndex = 30
+        Me.tbTenDangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lbDoiMatKhau
+        '
+        Me.lbDoiMatKhau.AutoSize = True
+        Me.lbDoiMatKhau.BackColor = System.Drawing.Color.Transparent
+        Me.lbDoiMatKhau.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDoiMatKhau.ForeColor = System.Drawing.Color.Blue
+        Me.lbDoiMatKhau.Location = New System.Drawing.Point(6, 109)
+        Me.lbDoiMatKhau.Name = "lbDoiMatKhau"
+        Me.lbDoiMatKhau.Size = New System.Drawing.Size(103, 21)
+        Me.lbDoiMatKhau.TabIndex = 10
+        Me.lbDoiMatKhau.Text = "Đổi mật khẩu"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(6, 33)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(114, 21)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Tên đăng nhập:"
         '
         'btnLuu
         '
@@ -436,13 +574,17 @@ Partial Class ucChinhSuaNguoiDung
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.btnLuu)
         Me.Controls.Add(Me.btnThoat)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbDangNhap)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "ucChinhSuaNguoiDung"
         Me.Size = New System.Drawing.Size(700, 530)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.gbDangNhap.ResumeLayout(False)
+        Me.gbDangNhap.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -466,11 +608,21 @@ Partial Class ucChinhSuaNguoiDung
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbDangNhap As GroupBox
     Friend WithEvents tbSoDienThoai As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents tbEmail As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents tbDiaChi As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents cbVaiTro As ComboBox
     Friend WithEvents btnLuu As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnThoat As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Label5 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents tbNhapLaiMatKhauMoi As TextBox
+    Friend WithEvents tbMatKhauMoi As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents tbMatKhau As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents tbTenDangNhap As TextBox
+    Friend WithEvents lbDoiMatKhau As Label
 End Class
