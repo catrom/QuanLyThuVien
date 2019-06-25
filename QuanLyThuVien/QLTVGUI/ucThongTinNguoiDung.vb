@@ -33,6 +33,10 @@ Public Class ucThongTinNguoiDung
             btnThemNguoiDung.Enabled = False
             btnTimKiemNguoiDung.Enabled = False
         End If
+
+        If vaitro.TenVaiTro <> "ĐỘC GIẢ" Then
+            btnLichSuMuonTra.Enabled = False
+        End If
     End Sub
 
     Private Sub btnThemNguoiDung_Click(sender As Object, e As EventArgs) Handles btnThemNguoiDung.Click

@@ -66,4 +66,13 @@ Public Class frmHome
 
         fpnZone.Controls.Add(ucThongTinNguoiDung)
     End Sub
+
+    Private Sub btnQuanLySach_Click(sender As Object, e As EventArgs) Handles btnQuanLySach.Click
+        fpnZone.Controls.Clear()
+        Dim ucQuanLySach As New ucQuanLySach With {
+            .dangnhap = Me.dangnhap
+        }
+
+        fpnZone.Controls.Add(ucQuanLySach)
+    End Sub
 End Class

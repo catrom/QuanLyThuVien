@@ -127,6 +127,24 @@
     <Compile Include="ucChinhSuaNguoiDung.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucNhaCungCap.Designer.vb">
+      <DependentUpon>ucNhaCungCap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhaCungCap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPhieuNhap.Designer.vb">
+      <DependentUpon>ucPhieuNhap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucPhieuNhap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuanLySach.Designer.vb">
+      <DependentUpon>ucQuanLySach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucQuanLySach.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucTraCuuNguoiDung.Designer.vb">
       <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
     </Compile>
@@ -233,6 +251,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucChinhSuaNguoiDung.resx">
       <DependentUpon>ucChinhSuaNguoiDung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhaCungCap.resx">
+      <DependentUpon>ucNhaCungCap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPhieuNhap.resx">
+      <DependentUpon>ucPhieuNhap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuanLySach.resx">
+      <DependentUpon>ucQuanLySach.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuNguoiDung.resx">
       <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
@@ -485,6 +512,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Account_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-book-64 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -40,6 +40,9 @@ Public Class NhaCungCapDAL
                         While reader.Read()
                             msOnDB = reader("manhacungcap")
                         End While
+                    Else
+                        value = value + "00001"
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(3)
@@ -49,6 +52,7 @@ Public Class NhaCungCapDAL
                         tmp = tmp.PadLeft(msOnDB.Length - 3, "0")
                         value = value + tmp
                         System.Console.WriteLine(value)
+
                     End If
 
                 Catch ex As Exception
