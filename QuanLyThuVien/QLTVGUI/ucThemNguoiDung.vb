@@ -46,7 +46,12 @@ Public Class ucThemNguoiDung
         nguoidung.VaiTro = cbVaiTro.SelectedValue.ToString()
         nguoidung.NgayTao = Today
 
-        nguoidungBus.insert(nguoidung)
+        Dim res = nguoidungBus.insert(nguoidung)
+        If res.FlagResult = False Then
+            MessageBox.Show("Lưu người dùng thất bại!\n" + res.SystemMessage, "Lỗi", MessageBoxButtons.OK)
+        Else
+            MessageBox.Show("Lưu người dùng thành công!", "Thông tin", MessageBoxButtons.OK)
+        End If
         Back(sender)
 
     End Sub

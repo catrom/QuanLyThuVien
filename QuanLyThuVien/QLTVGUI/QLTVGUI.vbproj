@@ -121,6 +121,18 @@
     <Compile Include="splashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ucChinhSuaNguoiDung.Designer.vb">
+      <DependentUpon>ucChinhSuaNguoiDung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucChinhSuaNguoiDung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTraCuuNguoiDung.Designer.vb">
+      <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTraCuuNguoiDung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucBaoCao.Designer.vb">
       <DependentUpon>ucBaoCao.vb</DependentUpon>
     </Compile>
@@ -218,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splashScreen.resx">
       <DependentUpon>splashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucChinhSuaNguoiDung.resx">
+      <DependentUpon>ucChinhSuaNguoiDung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTraCuuNguoiDung.resx">
+      <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucBaoCao.resx">
       <DependentUpon>ucBaoCao.vb</DependentUpon>

@@ -27,7 +27,8 @@ Partial Class frmHome
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.pnTaskBar = New System.Windows.Forms.Panel()
         Me.lbTrangThai = New System.Windows.Forms.Label()
-        Me.lbThayDoi = New System.Windows.Forms.Label()
+        Me.ibtnMinimize = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.ibtnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.fpnZone = New System.Windows.Forms.FlowLayoutPanel()
         Me.dot6 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.dot5 = New Bunifu.Framework.UI.BunifuGradientPanel()
@@ -45,14 +46,12 @@ Partial Class frmHome
         Me.btnQuyDinh = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnNguoiDung = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pbMenu = New System.Windows.Forms.PictureBox()
-        Me.ibtnMinimize = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.ibtnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.pnTaskBar.SuspendLayout()
+        CType(Me.ibtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ibtnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
         CType(Me.btnLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ibtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ibtnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuDragControl1
@@ -71,7 +70,7 @@ Partial Class frmHome
         Me.pnTaskBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnTaskBar.Location = New System.Drawing.Point(0, 0)
         Me.pnTaskBar.Name = "pnTaskBar"
-        Me.pnTaskBar.Size = New System.Drawing.Size(984, 29)
+        Me.pnTaskBar.Size = New System.Drawing.Size(962, 29)
         Me.pnTaskBar.TabIndex = 2
         '
         'lbTrangThai
@@ -85,27 +84,42 @@ Partial Class frmHome
         Me.lbTrangThai.Text = "lbTrangThai"
         Me.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lbThayDoi
+        'ibtnMinimize
         '
-        Me.lbThayDoi.AutoSize = True
-        Me.lbThayDoi.BackColor = System.Drawing.Color.Transparent
-        Me.lbThayDoi.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbThayDoi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lbThayDoi.Location = New System.Drawing.Point(11, 531)
-        Me.lbThayDoi.Name = "lbThayDoi"
-        Me.lbThayDoi.Size = New System.Drawing.Size(80, 21)
-        Me.lbThayDoi.TabIndex = 1
-        Me.lbThayDoi.Text = "Đăng xuất"
-        Me.lbThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ibtnMinimize.BackColor = System.Drawing.Color.Transparent
+        Me.ibtnMinimize.Image = Global.QLTVGUI.My.Resources.Resources.icons8_Minimize_Window_64
+        Me.ibtnMinimize.ImageActive = Nothing
+        Me.ibtnMinimize.Location = New System.Drawing.Point(909, 2)
+        Me.ibtnMinimize.Name = "ibtnMinimize"
+        Me.ibtnMinimize.Size = New System.Drawing.Size(25, 25)
+        Me.ibtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ibtnMinimize.TabIndex = 0
+        Me.ibtnMinimize.TabStop = False
+        Me.ibtnMinimize.Zoom = 25
+        '
+        'ibtnExit
+        '
+        Me.ibtnExit.BackColor = System.Drawing.Color.Transparent
+        Me.ibtnExit.Image = Global.QLTVGUI.My.Resources.Resources.icons8_Close_Window_64
+        Me.ibtnExit.ImageActive = Nothing
+        Me.ibtnExit.Location = New System.Drawing.Point(934, 2)
+        Me.ibtnExit.Name = "ibtnExit"
+        Me.ibtnExit.Size = New System.Drawing.Size(25, 25)
+        Me.ibtnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ibtnExit.TabIndex = 0
+        Me.ibtnExit.TabStop = False
+        Me.ibtnExit.Zoom = 25
         '
         'fpnZone
         '
         Me.fpnZone.AutoScroll = True
+        Me.fpnZone.AutoSize = True
+        Me.fpnZone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.fpnZone.BackColor = System.Drawing.Color.WhiteSmoke
         Me.fpnZone.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.fpnZone.Location = New System.Drawing.Point(251, 29)
         Me.fpnZone.Name = "fpnZone"
-        Me.fpnZone.Size = New System.Drawing.Size(730, 530)
+        Me.fpnZone.Size = New System.Drawing.Size(0, 0)
         Me.fpnZone.TabIndex = 1
         '
         'dot6
@@ -457,44 +471,17 @@ Partial Class frmHome
         Me.pbMenu.Image = Global.QLTVGUI.My.Resources.Resources.blankpage1
         Me.pbMenu.Location = New System.Drawing.Point(0, 29)
         Me.pbMenu.Name = "pbMenu"
-        Me.pbMenu.Size = New System.Drawing.Size(250, 532)
+        Me.pbMenu.Size = New System.Drawing.Size(250, 521)
         Me.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbMenu.TabIndex = 0
         Me.pbMenu.TabStop = False
-        '
-        'ibtnMinimize
-        '
-        Me.ibtnMinimize.BackColor = System.Drawing.Color.Transparent
-        Me.ibtnMinimize.Image = Global.QLTVGUI.My.Resources.Resources.icons8_Minimize_Window_64
-        Me.ibtnMinimize.ImageActive = Nothing
-        Me.ibtnMinimize.Location = New System.Drawing.Point(931, 2)
-        Me.ibtnMinimize.Name = "ibtnMinimize"
-        Me.ibtnMinimize.Size = New System.Drawing.Size(25, 25)
-        Me.ibtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ibtnMinimize.TabIndex = 0
-        Me.ibtnMinimize.TabStop = False
-        Me.ibtnMinimize.Zoom = 25
-        '
-        'ibtnExit
-        '
-        Me.ibtnExit.BackColor = System.Drawing.Color.Transparent
-        Me.ibtnExit.Image = Global.QLTVGUI.My.Resources.Resources.icons8_Close_Window_64
-        Me.ibtnExit.ImageActive = Nothing
-        Me.ibtnExit.Location = New System.Drawing.Point(956, 2)
-        Me.ibtnExit.Name = "ibtnExit"
-        Me.ibtnExit.Size = New System.Drawing.Size(25, 25)
-        Me.ibtnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ibtnExit.TabIndex = 0
-        Me.ibtnExit.TabStop = False
-        Me.ibtnExit.Zoom = 25
         '
         'frmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(984, 561)
-        Me.Controls.Add(Me.lbThayDoi)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(962, 550)
         Me.Controls.Add(Me.dot6)
         Me.Controls.Add(Me.dot5)
         Me.Controls.Add(Me.dot4)
@@ -518,12 +505,12 @@ Partial Class frmHome
         Me.Text = "QUẢN LÝ THƯ VIỆN"
         Me.pnTaskBar.ResumeLayout(False)
         Me.pnTaskBar.PerformLayout()
+        CType(Me.ibtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ibtnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BunifuGradientPanel1.ResumeLayout(False)
         Me.BunifuGradientPanel1.PerformLayout()
         CType(Me.btnLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ibtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ibtnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -539,7 +526,6 @@ Partial Class frmHome
     Friend WithEvents btnTraCuu As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnQuanLyDocGia As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnBaoCao As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents lbThayDoi As Label
     Friend WithEvents lbTrangThai As Label
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents btnLogo As Bunifu.Framework.UI.BunifuImageButton

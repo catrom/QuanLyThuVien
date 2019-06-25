@@ -15,6 +15,18 @@ Public Class NguoiDungBUS
         Return nd.selectALL(list)
     End Function
 
+    Public Function selectALL_ByFilters(manguoidung As String, hoten As String, diachi As String,
+                                        tuoithapnhat As Integer, tuoicaonhat As Integer,
+                                        vaitro As String,
+                                        ngaytaothapnhat As Date, ngaytaocaonhat As Date,
+                                        ByRef list As List(Of NguoiDungDTO)) As Result
+        Return nd.selectALL_ByFilters(manguoidung, hoten, diachi,
+                                        tuoithapnhat, tuoicaonhat,
+                                        vaitro,
+                                        ngaytaothapnhat, ngaytaocaonhat,
+                                        list)
+    End Function
+
     Public Function selectALL_ByMaNguoiDung(manguoidung As String, ByRef list As List(Of String)) As Result
         Return nd.selectALL_ByMaNguoiDung(manguoidung, list)
     End Function

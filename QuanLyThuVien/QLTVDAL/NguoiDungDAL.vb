@@ -135,6 +135,61 @@ Public Class NguoiDungDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function selectALL_ByFilters(manguoidung As String, hoten As String, diachi As String,
+                                        tuoithapnhat As Integer, tuoicaonhat As Integer,
+                                        vaitro As String,
+                                        ngaytaothapnhat As Date, ngaytaocaonhat As Date,
+                                        ByRef list As List(Of NguoiDungDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT * "
+        query &= "FROM [tblNguoiDung] "
+        query &= "WHERE [manguoidung] like @manguoidung "
+        query &= "  AND [hoten] like @hoten "
+        query &= "  AND [diachi] like @diachi "
+        query &= "  AND DATEDIFF(year, [ngaysinh], GETDATE()) >= @tuoithapnhat "
+        query &= "  AND DATEDIFF(year, [ngaysinh], GETDATE()) <= @tuoicaonhat "
+        query &= "  AND [vaitro] like @vaitro "
+        query &= "  AND [ngaytao] >= @ngaytaothapnhat "
+        query &= "  AND [ngaytao] <= @ngaytaocaonhat "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@manguoidung", manguoidung)
+                    .Parameters.AddWithValue("@hoten", hoten)
+                    .Parameters.AddWithValue("@diachi", diachi)
+                    .Parameters.AddWithValue("@tuoithapnhat", tuoithapnhat)
+                    .Parameters.AddWithValue("@tuoicaonhat", tuoicaonhat)
+                    .Parameters.AddWithValue("@vaitro", vaitro)
+                    .Parameters.AddWithValue("@ngaytaothapnhat", ngaytaothapnhat)
+                    .Parameters.AddWithValue("@ngaytaocaonhat", ngaytaocaonhat)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        list.Clear()
+                        While reader.Read()
+                            list.Add(New NguoiDungDTO(reader("manguoidung"), reader("hoten"), reader("CMND"), reader("gioitinh"), reader("ngaysinh"),
+                                                         reader("diachi"), reader("email"), reader("sodienthoai"), reader("vaitro"), reader("ngaytao")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function selectALL_ByMaNguoiDung(manguoidung As String, ByRef list As List(Of String)) As Result
 
         Dim query As String = String.Empty

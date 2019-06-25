@@ -30,8 +30,8 @@ Public Class ucThongTinNguoiDung
         End If
 
         If vaitro.TenVaiTro <> "ADMIN" Then
-            btnThemNguoiDung.Visible = False
-            btnTimKiemNguoiDung.Visible = False
+            btnThemNguoiDung.Enabled = False
+            btnTimKiemNguoiDung.Enabled = False
         End If
     End Sub
 
@@ -43,11 +43,19 @@ Public Class ucThongTinNguoiDung
     End Sub
 
     Private Sub btnTimKiemNguoiDung_Click(sender As Object, e As EventArgs) Handles btnTimKiemNguoiDung.Click
-
+        Me.Controls.Clear()
+        Dim ucTraCuu As New ucTraCuuNguoiDung
+        Me.Controls.Add(ucTraCuu)
+        ucTraCuu.BringToFront()
     End Sub
 
     Private Sub btnChinhSuaThongTin_Click(sender As Object, e As EventArgs) Handles btnChinhSuaThongTin.Click
-
+        Me.Controls.Clear()
+        Dim ucChinhSua As New ucChinhSuaNguoiDung With {
+            .dangnhap = dangnhap
+        }
+        Me.Controls.Add(ucChinhSua)
+        ucChinhSua.BringToFront()
     End Sub
 
     Private Sub btnLichSuMuonTra_Click(sender As Object, e As EventArgs) Handles btnLichSuMuonTra.Click

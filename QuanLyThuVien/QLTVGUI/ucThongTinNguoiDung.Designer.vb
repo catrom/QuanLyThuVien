@@ -377,6 +377,7 @@ Partial Class ucThongTinNguoiDung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.Controls.Add(Me.btnLichSuMuonTra)
         Me.Controls.Add(Me.btnChinhSuaThongTin)
         Me.Controls.Add(Me.btnTimKiemNguoiDung)

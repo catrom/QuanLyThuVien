@@ -45,15 +45,7 @@ Public Class frmHome
         btnBaoCao.selected = False
     End Sub
 
-    Private Sub lbThayDoi_MouseHover(sender As Object, e As EventArgs) Handles lbThayDoi.MouseHover
-        lbThayDoi.ForeColor = Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(60, Byte), Integer))
-    End Sub
-
-    Private Sub lbThayDoi_MouseLeave(sender As Object, e As EventArgs) Handles lbThayDoi.MouseLeave
-        lbThayDoi.ForeColor = Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-    End Sub
-
-    Private Sub lbThayDoi_Click(sender As Object, e As EventArgs) Handles lbThayDoi.Click
+    Private Sub lbThayDoi_Click(sender As Object, e As EventArgs)
         Me.Hide()
 
         Dim splash As New splashScreen
