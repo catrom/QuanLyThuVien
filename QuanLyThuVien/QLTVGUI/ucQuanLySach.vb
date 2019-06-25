@@ -19,7 +19,12 @@ Public Class ucQuanLySach
     End Sub
 
     Private Sub btnNhapSach_Click(sender As Object, e As EventArgs) Handles btnNhapSach.Click
-
+        Me.Controls.Clear()
+        Dim phieunhap As New ucPhieuNhap With {
+            .dangnhap = dangnhap
+        }
+        Me.Controls.Add(phieunhap)
+        phieunhap.BringToFront()
     End Sub
 
     Private Sub btnXuatSach_Click(sender As Object, e As EventArgs) Handles btnXuatSach.Click

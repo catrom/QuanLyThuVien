@@ -279,6 +279,7 @@ Partial Class ucQuanLySach
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.Controls.Add(Me.btnTraSach)
         Me.Controls.Add(Me.btnMuonSach)
         Me.Controls.Add(Me.btnThemTacGia)

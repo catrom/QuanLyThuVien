@@ -41,6 +41,9 @@ Public Class DauSachDAL
                         While reader.Read()
                             msOnDB = reader("madausach")
                         End While
+                    Else
+                        value = value + "000001"
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(2)
