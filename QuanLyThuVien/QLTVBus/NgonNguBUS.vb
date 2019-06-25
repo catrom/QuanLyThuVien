@@ -27,5 +27,8 @@ Public Class NgonNguBUS
         Return nn.insert(value)
     End Function
 
+    Public Function update(value As NgonNguDTO) As Result
+        Return nn.update(value)
+    End Function
 End Class
 

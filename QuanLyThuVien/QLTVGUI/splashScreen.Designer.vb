@@ -32,6 +32,7 @@ Partial Class splashScreen
         Me.btnDocGia = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btnDangNhap = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbTrangThaiMK = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbMatKhau = New System.Windows.Forms.TextBox()
         Me.tbMaDangNhap = New System.Windows.Forms.TextBox()
@@ -39,12 +40,8 @@ Partial Class splashScreen
         Me.pnLogo = New System.Windows.Forms.Panel()
         Me.logo = New System.Windows.Forms.PictureBox()
         Me.lbName = New System.Windows.Forms.Label()
-        Me.progressBar = New Bunifu.Framework.UI.BunifuProgressBar()
-        Me.lbStatus = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuDragControl2 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuDragControl3 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-        Me.lbTrangThaiMK = New System.Windows.Forms.Label()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.pnDangNhap.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,8 +63,6 @@ Partial Class splashScreen
         Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuGradientPanel1.Controls.Add(Me.pnDangNhap)
         Me.BunifuGradientPanel1.Controls.Add(Me.pnLogo)
-        Me.BunifuGradientPanel1.Controls.Add(Me.progressBar)
-        Me.BunifuGradientPanel1.Controls.Add(Me.lbStatus)
         Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White
         Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray
@@ -176,6 +171,17 @@ Partial Class splashScreen
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Mật khẩu:"
         '
+        'lbTrangThaiMK
+        '
+        Me.lbTrangThaiMK.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTrangThaiMK.ForeColor = System.Drawing.Color.Red
+        Me.lbTrangThaiMK.Location = New System.Drawing.Point(9, 274)
+        Me.lbTrangThaiMK.Name = "lbTrangThaiMK"
+        Me.lbTrangThaiMK.Size = New System.Drawing.Size(220, 52)
+        Me.lbTrangThaiMK.TabIndex = 2
+        Me.lbTrangThaiMK.Text = "Thay đổi mật khẩu thành công"
+        Me.lbTrangThaiMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -224,7 +230,7 @@ Partial Class splashScreen
         Me.pnLogo.BackColor = System.Drawing.Color.Transparent
         Me.pnLogo.Controls.Add(Me.logo)
         Me.pnLogo.Controls.Add(Me.lbName)
-        Me.pnLogo.Location = New System.Drawing.Point(314, 138)
+        Me.pnLogo.Location = New System.Drawing.Point(155, 138)
         Me.pnLogo.Name = "pnLogo"
         Me.pnLogo.Size = New System.Drawing.Size(357, 239)
         Me.pnLogo.TabIndex = 8
@@ -252,34 +258,6 @@ Partial Class splashScreen
         Me.lbName.TabIndex = 8
         Me.lbName.Text = "QUẢN LÝ THƯ VIỆN"
         '
-        'progressBar
-        '
-        Me.progressBar.BackColor = System.Drawing.Color.LightGray
-        Me.progressBar.BorderRadius = 5
-        Me.progressBar.Location = New System.Drawing.Point(307, 481)
-        Me.progressBar.MaximumValue = 100
-        Me.progressBar.Name = "progressBar"
-        Me.progressBar.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.progressBar.Size = New System.Drawing.Size(370, 5)
-        Me.progressBar.TabIndex = 6
-        Me.progressBar.Value = 0
-        '
-        'lbStatus
-        '
-        Me.lbStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lbStatus.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbStatus.ForeColor = System.Drawing.Color.LightGray
-        Me.lbStatus.Location = New System.Drawing.Point(368, 457)
-        Me.lbStatus.Name = "lbStatus"
-        Me.lbStatus.Size = New System.Drawing.Size(248, 23)
-        Me.lbStatus.TabIndex = 5
-        Me.lbStatus.Text = "Kết nối đến cơ sở dữ liệu"
-        Me.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1
-        '
         'BunifuDragControl2
         '
         Me.BunifuDragControl2.Fixed = True
@@ -293,17 +271,6 @@ Partial Class splashScreen
         Me.BunifuDragControl3.Horizontal = True
         Me.BunifuDragControl3.TargetControl = Me.pnLogo
         Me.BunifuDragControl3.Vertical = True
-        '
-        'lbTrangThaiMK
-        '
-        Me.lbTrangThaiMK.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTrangThaiMK.ForeColor = System.Drawing.Color.Red
-        Me.lbTrangThaiMK.Location = New System.Drawing.Point(9, 274)
-        Me.lbTrangThaiMK.Name = "lbTrangThaiMK"
-        Me.lbTrangThaiMK.Size = New System.Drawing.Size(220, 52)
-        Me.lbTrangThaiMK.TabIndex = 2
-        Me.lbTrangThaiMK.Text = "Thay đổi mật khẩu thành công"
-        Me.lbTrangThaiMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'splashScreen
         '
@@ -330,10 +297,7 @@ Partial Class splashScreen
 
     End Sub
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
-    Friend WithEvents progressBar As Bunifu.Framework.UI.BunifuProgressBar
-    Friend WithEvents lbStatus As Label
     Friend WithEvents pnLogo As Panel
     Friend WithEvents logo As PictureBox
     Friend WithEvents lbName As Label

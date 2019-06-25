@@ -41,6 +41,9 @@ Public Class NgonNguDAL
                         While reader.Read()
                             msOnDB = reader("mangonngu")
                         End While
+                    Else
+                        value = value + "000001"
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(2)
@@ -158,5 +161,36 @@ Public Class NgonNguDAL
             End Using
         End Using
         Return New Result(True)
+    End Function
+
+    Public Function update(value As NgonNguDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblNgonNgu] SET"
+        query &= " [tenngonngu] = @tenngonngu "
+        query &= " WHERE "
+        query &= " [mangonngu] = @mangonngu"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@mangonngu", value.MaNgonNgu)
+                    .Parameters.AddWithValue("@tenngonngu", value.TenNgonNgu)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
     End Function
 End Class

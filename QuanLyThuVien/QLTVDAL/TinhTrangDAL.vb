@@ -14,11 +14,61 @@ Public Class TinhTrangDAL
         Me.connectionString = ConnectionString
     End Sub
 
+    Public Function buildMaTinhTrang(ByRef value As String) As Result
+        value = String.Empty
+        value = "TT"
+
+        Dim query As String = String.Empty
+        query &= "SELECT TOP 1 [matinhtrang] "
+        query &= "FROM [tblTinhTrang] "
+        query &= "ORDER BY [matinhtrang] DESC "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    Dim msOnDB As String
+                    msOnDB = Nothing
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            msOnDB = reader("matinhtrang")
+                        End While
+                    Else
+                        value = value + "000001"
+                        Return New Result(True)
+                    End If
+                    If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
+                        Dim v = msOnDB.Substring(2)
+                        Dim convertDecimal = Convert.ToDecimal(v)
+                        convertDecimal = convertDecimal + 1
+                        Dim tmp = convertDecimal.ToString()
+                        tmp = tmp.PadLeft(msOnDB.Length - 2, "0")
+                        value = value + tmp
+                        System.Console.WriteLine(value)
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
     Public Function selectAll(ByRef listTT As List(Of TinhTrangDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " select [matinhtrang], [tentinhtrang]"
-        query &= " from [tblTrangThai]"
+        query &= " select *"
+        query &= " from [tblTinhTrang]"
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()

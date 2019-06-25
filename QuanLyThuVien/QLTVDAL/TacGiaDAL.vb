@@ -41,6 +41,9 @@ Public Class TacGiaDAL
                         While reader.Read()
                             msOnDB = reader("matacgia")
                         End While
+                    Else
+                        value = value + "000001"
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(2)
@@ -122,5 +125,36 @@ Public Class TacGiaDAL
             End Using
         End Using
         Return New Result(True)
+    End Function
+
+    Public Function update(value As TacGiaDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblTacGia] SET"
+        query &= " [tentacgia] = @tentacgia "
+        query &= " WHERE "
+        query &= " [matacgia] = @matacgia"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@matacgia", value.MaTacGia)
+                    .Parameters.AddWithValue("@tentacgia", value.TenTacGia)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
     End Function
 End Class

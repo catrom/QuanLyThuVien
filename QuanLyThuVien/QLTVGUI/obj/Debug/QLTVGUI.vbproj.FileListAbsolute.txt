@@ -259,3 +259,9 @@ C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGU
 C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucNhaCungCap.resources
 C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucPhieuNhap.resources
 C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucQuanLySach.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucNhaThanhLy.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucNhaXuatBan.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucTheLoaiSach.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucTacGia.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucNgonNgu.resources
+C:\Users\Admin\Desktop\PTTK\QuanLyThuVien\QuanLyThuVien\QLTVGUI\obj\Debug\QLTVGUI.ucTinhTrang.resources

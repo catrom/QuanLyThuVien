@@ -12,6 +12,10 @@ Public Class TinhTrangBUS
         ttDAL = New TinhTrangDAL(connectionString)
     End Sub
 
+    Public Function buildMaTinhTrang(ByRef value As String) As Result
+        Return ttDAL.buildMaTinhTrang(value)
+    End Function
+
     Public Function selectAll(ByRef listTT As List(Of TinhTrangDTO)) As Result
         Return ttDAL.selectAll(listTT)
     End Function

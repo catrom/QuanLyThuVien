@@ -24,4 +24,8 @@ Public Class TacGiaBUS
     Public Function insert(value As TacGiaDTO) As Result
         Return tgDAL.insert(value)
     End Function
+
+    Public Function update(value As TacGiaDTO) As Result
+        Return tgDAL.update(value)
+    End Function
 End Class

@@ -127,10 +127,28 @@
     <Compile Include="ucChinhSuaNguoiDung.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucNgonNgu.Designer.vb">
+      <DependentUpon>ucNgonNgu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucNgonNgu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucNhaCungCap.Designer.vb">
       <DependentUpon>ucNhaCungCap.vb</DependentUpon>
     </Compile>
     <Compile Include="ucNhaCungCap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhaThanhLy.Designer.vb">
+      <DependentUpon>ucNhaThanhLy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhaThanhLy.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhaXuatBan.Designer.vb">
+      <DependentUpon>ucNhaXuatBan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhaXuatBan.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucPhieuNhap.Designer.vb">
@@ -143,6 +161,24 @@
       <DependentUpon>ucQuanLySach.vb</DependentUpon>
     </Compile>
     <Compile Include="ucQuanLySach.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTacGia.Designer.vb">
+      <DependentUpon>ucTacGia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTacGia.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTheLoaiSach.Designer.vb">
+      <DependentUpon>ucTheLoaiSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTheLoaiSach.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTinhTrang.Designer.vb">
+      <DependentUpon>ucTinhTrang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTinhTrang.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucTraCuuNguoiDung.Designer.vb">
@@ -252,14 +288,32 @@
     <EmbeddedResource Include="ucChinhSuaNguoiDung.resx">
       <DependentUpon>ucChinhSuaNguoiDung.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucNgonNgu.resx">
+      <DependentUpon>ucNgonNgu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucNhaCungCap.resx">
       <DependentUpon>ucNhaCungCap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhaThanhLy.resx">
+      <DependentUpon>ucNhaThanhLy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhaXuatBan.resx">
+      <DependentUpon>ucNhaXuatBan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucPhieuNhap.resx">
       <DependentUpon>ucPhieuNhap.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucQuanLySach.resx">
       <DependentUpon>ucQuanLySach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTacGia.resx">
+      <DependentUpon>ucTacGia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTheLoaiSach.resx">
+      <DependentUpon>ucTheLoaiSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTinhTrang.resx">
+      <DependentUpon>ucTinhTrang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuNguoiDung.resx">
       <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>

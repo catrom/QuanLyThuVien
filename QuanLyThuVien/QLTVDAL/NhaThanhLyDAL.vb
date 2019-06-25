@@ -40,6 +40,9 @@ Public Class NhaThanhLyDAL
                         While reader.Read()
                             msOnDB = reader("manhathanhly")
                         End While
+                    Else
+                        value = value + "00001"
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(3)

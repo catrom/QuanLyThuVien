@@ -20,30 +20,14 @@ Public Class splashScreen
     End Function
 
     Private Sub splashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If checkConnection() = False Then
+            MessageBox.Show("Kết nối thất bại! Vui lòng kiểm tra lại cài đặt cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Close()
+        End If
+
         pnDangNhap.Width = 0
         btnDangNhap.Focus()
-
-        Timer1.Interval = 1
-        Timer1.Start()
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If progressBar.Value < 100 Then
-            progressBar.Value += 1
-        Else
-            Timer1.Stop()
-
-            If checkConnection() = True Then
-                pnDangNhap.Width = 307
-                pnLogo.Location = New Drawing.Point(155, 138)
-                lbStatus.Text = "Kết nối thành công!"
-                progressBar.Visible = False
-
-            Else
-                MessageBox.Show("Kết nối thất bại! Vui lòng kiểm tra lại cài đặt cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Close()
-            End If
-        End If
+        pnDangNhap.Width = 307
     End Sub
 
     Private Sub btnDocGia_Click(sender As Object, e As EventArgs) Handles btnDocGia.Click
@@ -53,7 +37,7 @@ Public Class splashScreen
     End Sub
 
     Private Sub tbMaDangNhap_MouseClick(sender As Object, e As MouseEventArgs) Handles tbMaDangNhap.MouseClick
-        lbStatus.Visible = False
+        'lbStatus.Visible = False
     End Sub
 
     Private Sub btnDangNhap_Click(sender As Object, e As EventArgs) Handles btnDangNhap.Click

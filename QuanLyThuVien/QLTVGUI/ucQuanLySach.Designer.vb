@@ -23,19 +23,153 @@ Partial Class ucQuanLySach
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucQuanLySach))
-        Me.btnTraSach = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnMuonSach = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThemNhaThanhLy = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnXuatSach = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThemNhaCungCap = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnNhapSach = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.dot1 = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.btnThemNgonNgu = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThemTheLoai = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThemTacGia = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThemNhaXuatBan = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnTinhTrangSach = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnTraSach = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnMuonSach = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnXuatSach = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnNhapSach = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.dot1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.SuspendLayout()
+        '
+        'btnThemNhaThanhLy
+        '
+        Me.btnThemNhaThanhLy.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemNhaThanhLy.color = System.Drawing.Color.LightGray
+        Me.btnThemNhaThanhLy.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemNhaThanhLy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemNhaThanhLy.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemNhaThanhLy.ForeColor = System.Drawing.Color.Black
+        Me.btnThemNhaThanhLy.Image = Nothing
+        Me.btnThemNhaThanhLy.ImagePosition = 5
+        Me.btnThemNhaThanhLy.ImageZoom = 20
+        Me.btnThemNhaThanhLy.LabelPosition = 34
+        Me.btnThemNhaThanhLy.LabelText = "Nhà Thanh Lý"
+        Me.btnThemNhaThanhLy.Location = New System.Drawing.Point(432, 133)
+        Me.btnThemNhaThanhLy.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemNhaThanhLy.Name = "btnThemNhaThanhLy"
+        Me.btnThemNhaThanhLy.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemNhaThanhLy.TabIndex = 18
+        '
+        'btnThemNhaCungCap
+        '
+        Me.btnThemNhaCungCap.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemNhaCungCap.color = System.Drawing.Color.LightGray
+        Me.btnThemNhaCungCap.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemNhaCungCap.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemNhaCungCap.ForeColor = System.Drawing.Color.Black
+        Me.btnThemNhaCungCap.Image = Nothing
+        Me.btnThemNhaCungCap.ImagePosition = 5
+        Me.btnThemNhaCungCap.ImageZoom = 20
+        Me.btnThemNhaCungCap.LabelPosition = 34
+        Me.btnThemNhaCungCap.LabelText = "Nhà Cung Cấp"
+        Me.btnThemNhaCungCap.Location = New System.Drawing.Point(432, 79)
+        Me.btnThemNhaCungCap.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemNhaCungCap.Name = "btnThemNhaCungCap"
+        Me.btnThemNhaCungCap.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemNhaCungCap.TabIndex = 19
+        '
+        'btnThemNgonNgu
+        '
+        Me.btnThemNgonNgu.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemNgonNgu.color = System.Drawing.Color.LightGray
+        Me.btnThemNgonNgu.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemNgonNgu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemNgonNgu.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemNgonNgu.ForeColor = System.Drawing.Color.Black
+        Me.btnThemNgonNgu.Image = Nothing
+        Me.btnThemNgonNgu.ImagePosition = 5
+        Me.btnThemNgonNgu.ImageZoom = 20
+        Me.btnThemNgonNgu.LabelPosition = 34
+        Me.btnThemNgonNgu.LabelText = "Ngôn Ngữ Sách"
+        Me.btnThemNgonNgu.Location = New System.Drawing.Point(432, 349)
+        Me.btnThemNgonNgu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemNgonNgu.Name = "btnThemNgonNgu"
+        Me.btnThemNgonNgu.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemNgonNgu.TabIndex = 18
+        '
+        'btnThemTheLoai
+        '
+        Me.btnThemTheLoai.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemTheLoai.color = System.Drawing.Color.LightGray
+        Me.btnThemTheLoai.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemTheLoai.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemTheLoai.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemTheLoai.ForeColor = System.Drawing.Color.Black
+        Me.btnThemTheLoai.Image = Nothing
+        Me.btnThemTheLoai.ImagePosition = 5
+        Me.btnThemTheLoai.ImageZoom = 20
+        Me.btnThemTheLoai.LabelPosition = 34
+        Me.btnThemTheLoai.LabelText = "Thể Loại Sách"
+        Me.btnThemTheLoai.Location = New System.Drawing.Point(432, 241)
+        Me.btnThemTheLoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemTheLoai.Name = "btnThemTheLoai"
+        Me.btnThemTheLoai.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemTheLoai.TabIndex = 18
+        '
+        'btnThemTacGia
+        '
+        Me.btnThemTacGia.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemTacGia.color = System.Drawing.Color.LightGray
+        Me.btnThemTacGia.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemTacGia.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemTacGia.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemTacGia.ForeColor = System.Drawing.Color.Black
+        Me.btnThemTacGia.Image = Nothing
+        Me.btnThemTacGia.ImagePosition = 5
+        Me.btnThemTacGia.ImageZoom = 20
+        Me.btnThemTacGia.LabelPosition = 34
+        Me.btnThemTacGia.LabelText = "Tác Giả Sách"
+        Me.btnThemTacGia.Location = New System.Drawing.Point(432, 295)
+        Me.btnThemTacGia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemTacGia.Name = "btnThemTacGia"
+        Me.btnThemTacGia.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemTacGia.TabIndex = 18
+        '
+        'btnThemNhaXuatBan
+        '
+        Me.btnThemNhaXuatBan.BackColor = System.Drawing.Color.LightGray
+        Me.btnThemNhaXuatBan.color = System.Drawing.Color.LightGray
+        Me.btnThemNhaXuatBan.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThemNhaXuatBan.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThemNhaXuatBan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemNhaXuatBan.ForeColor = System.Drawing.Color.Black
+        Me.btnThemNhaXuatBan.Image = Nothing
+        Me.btnThemNhaXuatBan.ImagePosition = 5
+        Me.btnThemNhaXuatBan.ImageZoom = 20
+        Me.btnThemNhaXuatBan.LabelPosition = 34
+        Me.btnThemNhaXuatBan.LabelText = "Nhà Xuất Bản"
+        Me.btnThemNhaXuatBan.Location = New System.Drawing.Point(432, 187)
+        Me.btnThemNhaXuatBan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThemNhaXuatBan.Name = "btnThemNhaXuatBan"
+        Me.btnThemNhaXuatBan.Size = New System.Drawing.Size(203, 41)
+        Me.btnThemNhaXuatBan.TabIndex = 18
+        '
+        'btnTinhTrangSach
+        '
+        Me.btnTinhTrangSach.BackColor = System.Drawing.Color.LightGray
+        Me.btnTinhTrangSach.color = System.Drawing.Color.LightGray
+        Me.btnTinhTrangSach.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnTinhTrangSach.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTinhTrangSach.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTinhTrangSach.ForeColor = System.Drawing.Color.Black
+        Me.btnTinhTrangSach.Image = Nothing
+        Me.btnTinhTrangSach.ImagePosition = 5
+        Me.btnTinhTrangSach.ImageZoom = 20
+        Me.btnTinhTrangSach.LabelPosition = 34
+        Me.btnTinhTrangSach.LabelText = "Tình Trạng Sách"
+        Me.btnTinhTrangSach.Location = New System.Drawing.Point(432, 403)
+        Me.btnTinhTrangSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnTinhTrangSach.Name = "btnTinhTrangSach"
+        Me.btnTinhTrangSach.Size = New System.Drawing.Size(203, 41)
+        Me.btnTinhTrangSach.TabIndex = 18
         '
         'btnTraSach
         '
@@ -75,25 +209,6 @@ Partial Class ucQuanLySach
         Me.btnMuonSach.Size = New System.Drawing.Size(203, 85)
         Me.btnMuonSach.TabIndex = 17
         '
-        'btnThemNhaThanhLy
-        '
-        Me.btnThemNhaThanhLy.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemNhaThanhLy.color = System.Drawing.Color.LightGray
-        Me.btnThemNhaThanhLy.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemNhaThanhLy.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemNhaThanhLy.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemNhaThanhLy.ForeColor = System.Drawing.Color.Black
-        Me.btnThemNhaThanhLy.Image = Nothing
-        Me.btnThemNhaThanhLy.ImagePosition = 5
-        Me.btnThemNhaThanhLy.ImageZoom = 20
-        Me.btnThemNhaThanhLy.LabelPosition = 34
-        Me.btnThemNhaThanhLy.LabelText = "Nhà Thanh Lý"
-        Me.btnThemNhaThanhLy.Location = New System.Drawing.Point(432, 144)
-        Me.btnThemNhaThanhLy.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemNhaThanhLy.Name = "btnThemNhaThanhLy"
-        Me.btnThemNhaThanhLy.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemNhaThanhLy.TabIndex = 18
-        '
         'btnXuatSach
         '
         Me.btnXuatSach.BackColor = System.Drawing.Color.LightGray
@@ -112,25 +227,6 @@ Partial Class ucQuanLySach
         Me.btnXuatSach.Name = "btnXuatSach"
         Me.btnXuatSach.Size = New System.Drawing.Size(203, 85)
         Me.btnXuatSach.TabIndex = 18
-        '
-        'btnThemNhaCungCap
-        '
-        Me.btnThemNhaCungCap.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemNhaCungCap.color = System.Drawing.Color.LightGray
-        Me.btnThemNhaCungCap.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemNhaCungCap.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemNhaCungCap.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemNhaCungCap.ForeColor = System.Drawing.Color.Black
-        Me.btnThemNhaCungCap.Image = Nothing
-        Me.btnThemNhaCungCap.ImagePosition = 5
-        Me.btnThemNhaCungCap.ImageZoom = 20
-        Me.btnThemNhaCungCap.LabelPosition = 34
-        Me.btnThemNhaCungCap.LabelText = "Nhà Cung Cấp"
-        Me.btnThemNhaCungCap.Location = New System.Drawing.Point(432, 79)
-        Me.btnThemNhaCungCap.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemNhaCungCap.Name = "btnThemNhaCungCap"
-        Me.btnThemNhaCungCap.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemNhaCungCap.TabIndex = 19
         '
         'btnNhapSach
         '
@@ -151,20 +247,6 @@ Partial Class ucQuanLySach
         Me.btnNhapSach.Size = New System.Drawing.Size(203, 85)
         Me.btnNhapSach.TabIndex = 19
         '
-        'dot1
-        '
-        Me.dot1.BackgroundImage = CType(resources.GetObject("dot1.BackgroundImage"), System.Drawing.Image)
-        Me.dot1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.dot1.GradientBottomLeft = System.Drawing.Color.Silver
-        Me.dot1.GradientBottomRight = System.Drawing.Color.Silver
-        Me.dot1.GradientTopLeft = System.Drawing.Color.Silver
-        Me.dot1.GradientTopRight = System.Drawing.Color.Silver
-        Me.dot1.Location = New System.Drawing.Point(55, 70)
-        Me.dot1.Name = "dot1"
-        Me.dot1.Quality = 10
-        Me.dot1.Size = New System.Drawing.Size(5, 387)
-        Me.dot1.TabIndex = 15
-        '
         'BunifuGradientPanel1
         '
         Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
@@ -179,81 +261,19 @@ Partial Class ucQuanLySach
         Me.BunifuGradientPanel1.Size = New System.Drawing.Size(5, 387)
         Me.BunifuGradientPanel1.TabIndex = 15
         '
-        'btnThemNgonNgu
+        'dot1
         '
-        Me.btnThemNgonNgu.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemNgonNgu.color = System.Drawing.Color.LightGray
-        Me.btnThemNgonNgu.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemNgonNgu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemNgonNgu.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemNgonNgu.ForeColor = System.Drawing.Color.Black
-        Me.btnThemNgonNgu.Image = Nothing
-        Me.btnThemNgonNgu.ImagePosition = 5
-        Me.btnThemNgonNgu.ImageZoom = 20
-        Me.btnThemNgonNgu.LabelPosition = 34
-        Me.btnThemNgonNgu.LabelText = "Ngôn Ngữ Sách"
-        Me.btnThemNgonNgu.Location = New System.Drawing.Point(432, 404)
-        Me.btnThemNgonNgu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemNgonNgu.Name = "btnThemNgonNgu"
-        Me.btnThemNgonNgu.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemNgonNgu.TabIndex = 18
-        '
-        'btnThemTheLoai
-        '
-        Me.btnThemTheLoai.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemTheLoai.color = System.Drawing.Color.LightGray
-        Me.btnThemTheLoai.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemTheLoai.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemTheLoai.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemTheLoai.ForeColor = System.Drawing.Color.Black
-        Me.btnThemTheLoai.Image = Nothing
-        Me.btnThemTheLoai.ImagePosition = 5
-        Me.btnThemTheLoai.ImageZoom = 20
-        Me.btnThemTheLoai.LabelPosition = 34
-        Me.btnThemTheLoai.LabelText = "Thể Loại Sách"
-        Me.btnThemTheLoai.Location = New System.Drawing.Point(432, 274)
-        Me.btnThemTheLoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemTheLoai.Name = "btnThemTheLoai"
-        Me.btnThemTheLoai.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemTheLoai.TabIndex = 18
-        '
-        'btnThemTacGia
-        '
-        Me.btnThemTacGia.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemTacGia.color = System.Drawing.Color.LightGray
-        Me.btnThemTacGia.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemTacGia.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemTacGia.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemTacGia.ForeColor = System.Drawing.Color.Black
-        Me.btnThemTacGia.Image = Nothing
-        Me.btnThemTacGia.ImagePosition = 5
-        Me.btnThemTacGia.ImageZoom = 20
-        Me.btnThemTacGia.LabelPosition = 34
-        Me.btnThemTacGia.LabelText = "Tác Giả Sách"
-        Me.btnThemTacGia.Location = New System.Drawing.Point(432, 339)
-        Me.btnThemTacGia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemTacGia.Name = "btnThemTacGia"
-        Me.btnThemTacGia.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemTacGia.TabIndex = 18
-        '
-        'btnThemNhaXuatBan
-        '
-        Me.btnThemNhaXuatBan.BackColor = System.Drawing.Color.LightGray
-        Me.btnThemNhaXuatBan.color = System.Drawing.Color.LightGray
-        Me.btnThemNhaXuatBan.colorActive = System.Drawing.SystemColors.ActiveBorder
-        Me.btnThemNhaXuatBan.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThemNhaXuatBan.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemNhaXuatBan.ForeColor = System.Drawing.Color.Black
-        Me.btnThemNhaXuatBan.Image = Nothing
-        Me.btnThemNhaXuatBan.ImagePosition = 5
-        Me.btnThemNhaXuatBan.ImageZoom = 20
-        Me.btnThemNhaXuatBan.LabelPosition = 34
-        Me.btnThemNhaXuatBan.LabelText = "Nhà Xuất Bản"
-        Me.btnThemNhaXuatBan.Location = New System.Drawing.Point(432, 209)
-        Me.btnThemNhaXuatBan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnThemNhaXuatBan.Name = "btnThemNhaXuatBan"
-        Me.btnThemNhaXuatBan.Size = New System.Drawing.Size(203, 41)
-        Me.btnThemNhaXuatBan.TabIndex = 18
+        Me.dot1.BackgroundImage = CType(resources.GetObject("dot1.BackgroundImage"), System.Drawing.Image)
+        Me.dot1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.dot1.GradientBottomLeft = System.Drawing.Color.Silver
+        Me.dot1.GradientBottomRight = System.Drawing.Color.Silver
+        Me.dot1.GradientTopLeft = System.Drawing.Color.Silver
+        Me.dot1.GradientTopRight = System.Drawing.Color.Silver
+        Me.dot1.Location = New System.Drawing.Point(55, 70)
+        Me.dot1.Name = "dot1"
+        Me.dot1.Quality = 10
+        Me.dot1.Size = New System.Drawing.Size(5, 387)
+        Me.dot1.TabIndex = 15
         '
         'ucQuanLySach
         '
@@ -264,6 +284,7 @@ Partial Class ucQuanLySach
         Me.Controls.Add(Me.btnThemTacGia)
         Me.Controls.Add(Me.btnThemTheLoai)
         Me.Controls.Add(Me.btnThemNhaXuatBan)
+        Me.Controls.Add(Me.btnTinhTrangSach)
         Me.Controls.Add(Me.btnThemNgonNgu)
         Me.Controls.Add(Me.btnThemNhaThanhLy)
         Me.Controls.Add(Me.btnXuatSach)
@@ -289,4 +310,5 @@ Partial Class ucQuanLySach
     Public WithEvents btnThemTheLoai As Bunifu.Framework.UI.BunifuTileButton
     Public WithEvents btnThemTacGia As Bunifu.Framework.UI.BunifuTileButton
     Public WithEvents btnThemNhaXuatBan As Bunifu.Framework.UI.BunifuTileButton
+    Public WithEvents btnTinhTrangSach As Bunifu.Framework.UI.BunifuTileButton
 End Class
