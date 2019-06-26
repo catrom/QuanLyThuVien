@@ -35,7 +35,7 @@ Public Class ThamSoDAL
                     reader = comm.ExecuteReader()
                     If reader.HasRows = True Then
                         While reader.Read()
-                            thamso = New ThamSoDTO(reader("tuoitoithieu"), reader("sosachmuontoida"), reader("sosanhmuontoida1lan"), reader("hanmuonsach"),
+                            thamso = New ThamSoDTO(reader("tuoitoithieu"), reader("sosachmuontoida"), reader("sosachmuontoida1lan"), reader("hanmuonsach"),
                                                    reader("mucgiaphat"), reader("mucgiacoban"))
                         End While
                     End If

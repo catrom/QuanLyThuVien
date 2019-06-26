@@ -20,8 +20,16 @@ Public Class CuonSachBUS
         Return cs.selectALL(list)
     End Function
 
+    Public Function getByMaCuonSach(macuonsach As String, ByRef value As CuonSachDTO) As Result
+        Return cs.getByMaCuonSach(macuonsach, value)
+    End Function
+
     Public Function insert(ctpm As CuonSachDTO) As Result
         Return cs.insert(ctpm)
+    End Function
+
+    Public Function updateTinhTrang(macuonsach As String, value As String) As Result
+        Return cs.updateTinhTrang(macuonsach, value)
     End Function
 End Class
 

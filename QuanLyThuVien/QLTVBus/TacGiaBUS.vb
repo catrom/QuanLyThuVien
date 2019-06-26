@@ -18,7 +18,7 @@ Public Class TacGiaBUS
     End Function
 
     Public Function selectAll(ByRef listtacgia As List(Of TacGiaDTO)) As Result
-        Return tgDAL.selectAll(listtacgia)
+        Return tgDAL.selectALL(listtacgia)
     End Function
 
     Public Function insert(value As TacGiaDTO) As Result

@@ -21,9 +21,7 @@ Public Class ucQuanLySach
     Private Sub btnNhapSach_Click(sender As Object, e As EventArgs) Handles btnNhapSach.Click
         Me.Controls.Clear()
         Dim phieunhap As New ucPhieuNhap With {
-            .dangnhap = dangnhap,
-            '.maphieunhap = "PN000001",
-            '.nhacungcap = "NCC00001"
+            .dangnhap = dangnhap
         }
         Me.Controls.Add(phieunhap)
         phieunhap.BringToFront()
@@ -34,7 +32,12 @@ Public Class ucQuanLySach
     End Sub
 
     Private Sub btnMuonSach_Click(sender As Object, e As EventArgs) Handles btnMuonSach.Click
-
+        Me.Controls.Clear()
+        Dim phieumuon As New ucChoMuonSach With {
+            .dangnhap = dangnhap
+        }
+        Me.Controls.Add(phieumuon)
+        phieumuon.BringToFront()
     End Sub
 
     Private Sub btnTraSach_Click(sender As Object, e As EventArgs) Handles btnTraSach.Click

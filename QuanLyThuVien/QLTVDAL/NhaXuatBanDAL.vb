@@ -96,6 +96,38 @@ Public Class NhaXuatBanDAL
         Return New Result(True)
     End Function
 
+    Public Function getByMaNhaXuatBan(manhaxuatban As String, ByRef value As NhaXuatBanDTO) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT * FROM [tblNhaXuatBan] WHERE [manhaxuatban] = @manhaxuatban"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@manhaxuatban", manhaxuatban)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New NhaXuatBanDTO(reader("manhaxuatban"), reader("tennhaxuatban"), reader("diachi"), reader("sodienthoai"), reader("sofax"))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả nhà xuất bản không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
     Public Function insert(value As NhaXuatBanDTO) As Result
 
         Dim query As String = String.Empty

@@ -41,6 +41,10 @@ Public Class PhieuMuonDAL
                         While reader.Read()
                             msOnDB = reader("maphieumuon")
                         End While
+                    Else
+                        value = value + "000001"
+                        conn.Close()
+                        Return New Result(True)
                     End If
                     If (msOnDB <> Nothing And msOnDB.Length >= 8) Then
                         Dim v = msOnDB.Substring(2)
@@ -114,6 +118,47 @@ Public Class PhieuMuonDAL
                         list.Clear()
                         While reader.Read()
                             list.Add(New PhieuMuonDTO(reader("maphieumuon"), reader("docgia"), reader("thuthu"), reader("ngaymuon")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
+    Public Function getAll_SachDangMuon_ByMaDocGia(madocgia As String, ByRef listMaSach As List(Of String), ByRef listTenSach As List(Of String), ByRef listNgayMuon As List(Of Date)) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT cs.[macuonsach], s.[tendausach], pm.[ngaymuon] "
+        query &= "FROM [tblCuonSach] cs, [tblChiTietPhieuMuon] ctpm, [tblPhieuMuon] pm, [tblNguoiDung] dg, [tblDauSach] s "
+        query &= "WHERE cs.[tinhtrang] = 'TT000004' and cs.[macuonsach] = ctpm.[macuonsach] and ctpm.[maphieumuon] = pm.[maphieumuon] and cs.[dausach] = s.[madausach] and pm.[docgia] = @madocgia "
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madocgia", madocgia)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listMaSach.Clear()
+                        listTenSach.Clear()
+                        listNgayMuon.Clear()
+                        While reader.Read()
+                            listMaSach.Add(reader("macuonsach"))
+                            listTenSach.Add(reader("tendausach"))
+                            listNgayMuon.Add(reader("ngaymuon"))
                         End While
                     End If
 

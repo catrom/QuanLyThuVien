@@ -100,6 +100,42 @@ Public Class CuonSachDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getByMaCuonSach(macuonsach As String, ByRef value As CuonSachDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT *"
+        query &= "FROM [tblCuonSach] "
+        query &= "WHERE [macuonsach] = @macuonsach"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@macuonsach", macuonsach)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New CuonSachDTO(reader("macuonsach"), reader("tinhtrang"), reader("dausach"), reader("soke"))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function insert(value As CuonSachDTO) As Result
 
         Dim query As String = String.Empty
@@ -116,6 +152,33 @@ Public Class CuonSachDAL
                     .Parameters.AddWithValue("@tinhtrang", value.TinhTrang)
                     .Parameters.AddWithValue("@dausach", value.DauSach)
                     .Parameters.AddWithValue("@soke", value.SoKe)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
+    Public Function updateTinhTrang(macuonsach As String, value As String) As Result
+
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblCuonSach] SET [tinhtrang] = @value WHERE [macuonsach] = @macuonsach"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@macuonsach", macuonsach)
+                    .Parameters.AddWithValue("@value", value)
                 End With
                 Try
                     conn.Open()

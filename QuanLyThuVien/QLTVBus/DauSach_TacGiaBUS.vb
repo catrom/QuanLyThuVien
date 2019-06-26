@@ -23,6 +23,10 @@ Public Class DauSach_TacGiaBus
         Return dstg.selectALL_ByMaDauSach(madausach, list)
     End Function
 
+    Public Function getListTacGiaAsString_ByMaDauSach(madausach As String, ByRef value As String) As Result
+        Return dstg.getListTacGiaAsString_ByMaDauSach(madausach, value)
+    End Function
+
     Public Function insert(value As DauSach_TacGiaDTO) As Result
         Return dstg.insert(value)
     End Function

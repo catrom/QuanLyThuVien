@@ -25,4 +25,7 @@ Public Class NhaXuatBanBUS
         Return nxbDAL.insert(value)
     End Function
 
+    Public Function getByMaNhaXuatBan(manhaxuatban As String, ByRef value As NhaXuatBanDTO) As Result
+        Return nxbDAL.getByMaNhaXuatBan(manhaxuatban, value)
+    End Function
 End Class

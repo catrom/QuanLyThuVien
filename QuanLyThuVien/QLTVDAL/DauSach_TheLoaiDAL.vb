@@ -50,6 +50,40 @@ Public Class DauSach_TheLoaiDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getListTheLoaiAsString_ByMaDauSach(madausach As String, ByRef value As String) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT [tentheloai]"
+        query &= " FROM [tblDauSach_TheLoai] dstl, [tblTheLoai] tl"
+        query &= " WHERE [madausach] = @madausach and dstl.[matheloai] = tl.[matheloai]"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madausach", madausach)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = value + reader("tentheloai") + ","
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function selectALL_ByMaTheLoai(matheloai As String, ByRef list As List(Of DauSach_TheLoaiDTO)) As Result
 
         Dim query As String = String.Empty

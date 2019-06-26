@@ -27,5 +27,9 @@ Public Class DauSach_TheLoaiBus
         Return dstl.insert(value)
     End Function
 
+    Public Function getListTheLoaiAsString_ByMaDauSach(madausach As String, ByRef value As String) As Result
+        Return dstl.getListTheLoaiAsString_ByMaDauSach(madausach, value)
+    End Function
+
 End Class
 

@@ -22,4 +22,8 @@ Public Class PhieuMuonBUS
     Public Function selectALL(ByRef listPhieuMuon As List(Of PhieuMuonDTO)) As Result
         Return pms.selectALL(listPhieuMuon)
     End Function
+
+    Public Function getAll_SachDangMuon_ByMaDocGia(madocgia As String, ByRef listMaSach As List(Of String), ByRef listTenSach As List(Of String), ByRef listNgayMuon As List(Of Date)) As Result
+        Return pms.getAll_SachDangMuon_ByMaDocGia(madocgia, listMaSach, listTenSach, listNgayMuon)
+    End Function
 End Class

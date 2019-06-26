@@ -50,6 +50,40 @@ Public Class DauSach_TacGiaDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getListTacGiaAsString_ByMaDauSach(madausach As String, ByRef value As String) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT [tentacgia]"
+        query &= " FROM [tblDauSach_TacGia] dstg, [tblTacGia] tg"
+        query &= " WHERE [madausach] = @madausach and dstg.[matacgia] = tg.[matacgia]"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madausach", madausach)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = value + reader("tentacgia") + ","
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function selectALL_ByMaTacGia(matacgia As String, ByRef list As List(Of DauSach_TacGiaDTO)) As Result
 
         Dim query As String = String.Empty
