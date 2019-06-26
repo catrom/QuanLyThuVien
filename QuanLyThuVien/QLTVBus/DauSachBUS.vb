@@ -15,6 +15,10 @@ Public Class DauSachBUS
         Return s.selectALL(list)
     End Function
 
+    Public Function getByMaDauSach(madausach As String, ByRef value As DauSachDTO) As Result
+        Return s.getByMaDauSach(madausach, value)
+    End Function
+
     Public Function buildMaDauSach(ByRef value As String) As Result
         Return s.buildMaDauSach(value)
     End Function

@@ -22,4 +22,12 @@ Public Class PhieuNhapBUS
     Public Function selectALL(ByRef listPhieuNhap As List(Of PhieuNhapDTO)) As Result
         Return pn.selectALL(listPhieuNhap)
     End Function
+
+    Public Function getByMaPhieuNhap(maphieunhap As String, ByRef value As PhieuNhapDTO) As Result
+        Return pn.getByMaPhieuNhap(maphieunhap, value)
+    End Function
+
+    Public Function update(value As PhieuNhapDTO) As Result
+        Return pn.update(value)
+    End Function
 End Class

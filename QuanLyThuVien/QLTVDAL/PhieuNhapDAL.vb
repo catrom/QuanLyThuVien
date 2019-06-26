@@ -130,4 +130,78 @@ Public Class PhieuNhapDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+    Public Function getByMaPhieuNhap(maphieunhap As String, ByRef value As PhieuNhapDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= "select * "
+        query &= "from [tblPhieuNhap] "
+        query &= "where [maphieunhap] = @maphieunhap"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maphieunhap", maphieunhap)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New PhieuNhapDTO(reader("maphieunhap"), reader("ngaynhap"), reader("nhacungcap"), reader("tongtien"), reader("nguoinhap"))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        If value.MaPhieuNhap Is Nothing Then
+            Return New Result(False)
+        End If
+        Return New Result(True)
+    End Function
+
+    Public Function update(value As PhieuNhapDTO) As Result
+
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblPhieuNhap] SET"
+        query &= " [ngaynhap] = @ngaynhap "
+        query &= " ,[nhacungcap] = @nhacungcap "
+        query &= " ,[tongtien] = @tongtien "
+        query &= " ,[nguoinhap] = @nguoinhap "
+        query &= " WHERE "
+        query &= " [maphieunhap] = @maphieunhap "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@ngaynhap", value.NgayNhap)
+                    .Parameters.AddWithValue("@nhacungcap", value.NhaCungCap)
+                    .Parameters.AddWithValue("@tongtien", value.TongTien)
+                    .Parameters.AddWithValue("@nguoinhap", value.NguoiNhap)
+                    .Parameters.AddWithValue("@maphieunhap", value.MaPhieuNhap)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class

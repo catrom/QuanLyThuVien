@@ -3,9 +3,17 @@ Imports QLTVDTO
 
 Public Class ucPhieuNhap
     Public dangnhap As DangNhapDTO
+    Public maphieunhap As String
+    Public nhacungcap As String
+    Dim tongtien As Integer
+
     Dim phieunhapBus As New PhieuNhapBUS
     Dim nhacungcapBus As New NhaCungCapBUS
+    Dim chitietphieunhapBus As New ChiTietPhieuNhapBUS
+    Dim dausachBus As New DauSachBUS
+
     Dim listNhaCungCap As New List(Of NhaCungCapDTO)
+    Dim listChiTietPhieuNhap As New List(Of ChiTietPhieuNhapDTO)
 
     Private Sub ucPhieuNhap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         phieunhapBus.build_maphieunhap(lbMaPhieuNhap.Text)
@@ -16,6 +24,37 @@ Public Class ucPhieuNhap
         cbNhaCungCap.DataSource = New BindingSource(listNhaCungCap, String.Empty)
         cbNhaCungCap.DisplayMember = "tennhacungcap"
         cbNhaCungCap.ValueMember = "manhacungcap"
+
+        If (maphieunhap <> Nothing) Then
+            lbMaPhieuNhap.Text = maphieunhap
+            cbNhaCungCap.SelectedValue = nhacungcap
+            cbNhaCungCap.Enabled = False
+            LoadData()
+        End If
+    End Sub
+
+    Private Sub LoadData()
+        If maphieunhap Is Nothing Then
+            Return
+        End If
+
+        chitietphieunhapBus.getAllByMaPhieuNhap(maphieunhap, listChiTietPhieuNhap)
+        tongtien = 0
+
+        For i As Integer = 0 To listChiTietPhieuNhap.Count - 1
+            Dim value = listChiTietPhieuNhap.ElementAt(i)
+
+            Dim dausach As New DauSachDTO
+            dausachBus.getByMaDauSach(value.MaDauSach, dausach)
+
+            Dim s As String()
+            s = New String() {value.MaDauSach, dausach.TenDauSach, dausach.TriGia.ToString("###,###,###"), value.SoLuong, value.ThanhTien.ToString("###,###,###"), value.GhiChu}
+            dgDanhSach.Rows.Add(s)
+
+            tongtien = tongtien + value.ThanhTien
+        Next
+
+        lbTongTien.Text = tongtien.ToString("###,###,###")
     End Sub
 
     Private Sub Back(sender As Object)
@@ -49,7 +88,9 @@ Public Class ucPhieuNhap
     Private Sub btnThemDauSach_Click(sender As Object, e As EventArgs) Handles btnThemDauSach.Click
         'Me.Controls.Clear()
         Dim tiepnhansach As New ucTiepNhanSachMoi With {
-            .maphieunhap = lbMaPhieuNhap.Text
+            .maphieunhap = lbMaPhieuNhap.Text,
+            .nhacungcap = cbNhaCungCap.SelectedValue.ToString,
+            .nguoinhap = lbNguoiNhap.Text
         }
         Me.Controls.Add(tiepnhansach)
         tiepnhansach.BringToFront()

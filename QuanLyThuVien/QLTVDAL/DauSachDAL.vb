@@ -100,6 +100,44 @@ Public Class DauSachDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getByMaDauSach(madausach As String, ByRef value As DauSachDTO) As Result
+        Dim query As String = String.Empty
+        query &= "SELECT *"
+        query &= "FROM [tblDauSach] "
+        query &= "WHERE [madausach] = @madausach"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madausach", madausach)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            value = New DauSachDTO(reader("madausach"), reader("tendausach"), reader("tomtat"), reader("nhaxuatban"), reader("namxuatban"), reader("trigia"))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        If value.MaDauSach Is Nothing Then
+            Return New Result(False)
+        End If
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function insert(value As DauSachDTO) As Result
 
         Dim query As String = String.Empty

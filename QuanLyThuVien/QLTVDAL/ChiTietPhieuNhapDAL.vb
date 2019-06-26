@@ -50,6 +50,41 @@ Public Class ChiTietPhieuNhapDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function getAllByMaPhieuNhap(maphieunhap As String, ByRef list As List(Of ChiTietPhieuNhapDTO)) As Result
+        Dim query As String = String.Empty
+        query &= "SELECT *"
+        query &= "FROM [tblChiTietPhieuNhap] "
+        query &= "WHERE [maphieunhap] = @maphieunhap "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maphieunhap", maphieunhap)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        list.Clear()
+                        While reader.Read()
+                            list.Add(New ChiTietPhieuNhapDTO(reader("maphieunhap"), reader("madausach"), reader("soluong"), reader("ghichu"), reader("thanhtien")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function insert(value As ChiTietPhieuNhapDTO) As Result
 
         Dim query As String = String.Empty

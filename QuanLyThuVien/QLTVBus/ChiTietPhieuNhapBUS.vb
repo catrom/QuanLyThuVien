@@ -16,6 +16,10 @@ Public Class ChiTietPhieuNhapBUS
         Return ctmnDAL.selectALL(list)
     End Function
 
+    Public Function getAllByMaPhieuNhap(maphieunhap As String, ByRef list As List(Of ChiTietPhieuNhapDTO)) As Result
+        Return ctmnDAL.getAllByMaPhieuNhap(maphieunhap, list)
+    End Function
+
     Public Function insert(ctpm As ChiTietPhieuNhapDTO) As Result
         Return ctmnDAL.insert(ctpm)
     End Function

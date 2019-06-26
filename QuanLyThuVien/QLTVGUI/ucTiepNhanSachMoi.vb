@@ -5,6 +5,8 @@ Imports System.Drawing
 
 Public Class ucTiepNhanSachMoi
     Public maphieunhap As String
+    Public nhacungcap As String
+    Public nguoinhap As String
 
     Dim dausach As New DauSachDTO
     Dim dausachBus As New DauSachBUS
@@ -18,6 +20,7 @@ Public Class ucTiepNhanSachMoi
     Dim dausach_ngonnguBus As New DauSach_NgonNguBus
     Dim chitietphieunhapBus As New ChiTietPhieuNhapBUS
     Dim cuonsachBus As New CuonSachBUS
+    Dim phieunhapBus As New PhieuNhapBUS
 
     Dim listNhaXuatBan As New List(Of NhaXuatBanDTO)
     Dim listTheLoai As New List(Of TheLoaiDTO)
@@ -90,6 +93,26 @@ Public Class ucTiepNhanSachMoi
         parent2.Controls.Add(phieunhap)
     End Sub
 
+    Private Sub BackWithData(sender As Object)
+        Dim current As ucTiepNhanSachMoi
+        current = sender.Parent
+        Dim parent As ucPhieuNhap
+        parent = current.Parent
+        Dim parent2 As ucQuanLySach
+        parent2 = parent.Parent
+        Dim parent3 = New FlowLayoutPanel
+        parent3 = parent2.Parent
+        Dim parent4 = New frmHome
+        parent4 = parent3.Parent
+        Dim phieunhap As New ucPhieuNhap With {
+            .dangnhap = parent4.dangnhap,
+            .maphieunhap = maphieunhap,
+            .nhacungcap = nhacungcap
+        }
+        parent2.Controls.Clear()
+        parent2.Controls.Add(phieunhap)
+    End Sub
+
     Private Sub btAddTheLoai_Click(sender As Object, e As EventArgs) Handles btAddTheLoai.Click
         If cbTheLoai.SelectedIndex > -1 Then
             If (listChonTheLoai.Contains(cbTheLoai.SelectedItem) = False) Then
@@ -157,7 +180,7 @@ Public Class ucTiepNhanSachMoi
             Return 0
         End If
         Dim tongtien = Convert.ToInt64(tbTriGia.Text) * nudSoLuong.Value
-        lbThanhTien.Text = tongtien.ToString("###,###,###.00")
+        lbThanhTien.Text = tongtien.ToString("###,###,###")
 
         Return tongtien
     End Function
@@ -217,6 +240,19 @@ Public Class ucTiepNhanSachMoi
             End If
         Next
 
+        'NOTE: Trước khi thêm chi tiết phiếu nhập, phải đảm bảo trong CSDL đã có mã phiếu nhập rồi,
+        'vì mã phiếu nhập là FK của chi tiết phiếu nhập
+        'Them phieu nhap
+        Dim phieunhap As New PhieuNhapDTO
+        result = phieunhapBus.getByMaPhieuNhap(maphieunhap, phieunhap)
+        If result.FlagResult = False Then ' Chua tao phieu nhap
+            phieunhap.MaPhieuNhap = maphieunhap
+            phieunhap.NgayNhap = Today
+            phieunhap.NguoiNhap = nguoinhap
+            phieunhap.NhaCungCap = nhacungcap
+            phieunhapBus.insert(phieunhap)
+        End If
+
         'Them chi tiet phieu nhap
         Dim chitietphieunhap As New ChiTietPhieuNhapDTO
         chitietphieunhap.MaPhieuNhap = maphieunhap
@@ -252,6 +288,6 @@ Public Class ucTiepNhanSachMoi
         Next
 
         MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK)
-        Back(sender)
+        BackWithData(sender)
     End Sub
 End Class
