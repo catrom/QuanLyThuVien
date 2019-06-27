@@ -32,10 +32,7 @@ Public Class splashScreen
     End Sub
 
     Private Sub btnDocGia_Click(sender As Object, e As EventArgs) Handles btnDocGia.Click
-        Me.Hide()
-        Dim home As New frmHome
 
-        home.Show()
     End Sub
 
     Private Sub tbMaDangNhap_MouseClick(sender As Object, e As MouseEventArgs) Handles tbMaDangNhap.MouseClick

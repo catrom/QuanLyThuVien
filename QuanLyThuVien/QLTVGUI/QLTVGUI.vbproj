@@ -163,6 +163,12 @@
     <Compile Include="ucQuanLySach.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucQuyDinh.Designer.vb">
+      <DependentUpon>ucQuyDinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucQuyDinh.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucTacGia.Designer.vb">
       <DependentUpon>ucTacGia.vb</DependentUpon>
     </Compile>
@@ -227,12 +233,6 @@
       <DependentUpon>ucNhanTraSach.vb</DependentUpon>
     </Compile>
     <Compile Include="ucNhanTraSach.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucThayDoiQuyDinh.Designer.vb">
-      <DependentUpon>ucThayDoiQuyDinh.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucThayDoiQuyDinh.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucThemNguoiDung.Designer.vb">
@@ -300,6 +300,9 @@
     <EmbeddedResource Include="ucQuanLySach.resx">
       <DependentUpon>ucQuanLySach.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucQuyDinh.resx">
+      <DependentUpon>ucQuyDinh.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTacGia.resx">
       <DependentUpon>ucTacGia.vb</DependentUpon>
     </EmbeddedResource>
@@ -332,9 +335,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucNhanTraSach.resx">
       <DependentUpon>ucNhanTraSach.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucThayDoiQuyDinh.resx">
-      <DependentUpon>ucThayDoiQuyDinh.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucThemNguoiDung.resx">
       <DependentUpon>ucThemNguoiDung.vb</DependentUpon>

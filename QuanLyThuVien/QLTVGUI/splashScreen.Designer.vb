@@ -65,9 +65,9 @@ Partial Class splashScreen
         Me.BunifuGradientPanel1.Controls.Add(Me.pnDangNhap)
         Me.BunifuGradientPanel1.Controls.Add(Me.pnLogo)
         Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White
-        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray
-        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Transparent
+        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black
+        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black
         Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"

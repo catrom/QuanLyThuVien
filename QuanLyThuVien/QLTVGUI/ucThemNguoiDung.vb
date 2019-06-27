@@ -55,12 +55,40 @@ Public Class ucThemNguoiDung
             MessageBox.Show("Lưu người dùng thành công!", "Thông tin", MessageBoxButtons.OK)
         End If
 
+        TaoTaiKhoanDangNhap()
+
         If isLapTheDocGia = False Then
             Back(sender)
             Return
         End If
 
         Back2(sender)
+    End Sub
+
+    Private Sub TaoTaiKhoanDangNhap()
+        Dim dangnhap As New DangNhapDTO
+        Dim dangnhapBus As New DangNhapBus
+
+        Dim result = dangnhapBus.buildMaDangNhap(dangnhap.MaDangNhap)
+        If result.FlagResult = False Then
+            MessageBox.Show("Tạo tài khoản đăng nhập thất bại!", "Lỗi", MessageBoxButtons.OK)
+            Return
+        End If
+
+        dangnhap.NguoiDung = lbMaNguoiDung.Text
+        dangnhap.TenDangNhap = tbHoTen.Text
+        dangnhap.MatKhau = CInt(Math.Ceiling(Rnd() * 999999)) + 1
+        dangnhap.DangNhapLanDau = True
+
+        result = dangnhapBus.insert(dangnhap)
+        If result.FlagResult = False Then
+            MessageBox.Show("Tạo tài khoản đăng nhập thất bại!", "Lỗi", MessageBoxButtons.OK)
+        Else
+            Dim mes = "Tạo tài khoản đăng nhập thành công!" + Environment.NewLine
+            mes = mes + "Tên đăng nhập: " + dangnhap.TenDangNhap + Environment.NewLine
+            mes = mes + "Mật khẩu: " + dangnhap.MatKhau
+            MessageBox.Show(mes, "Lỗi", MessageBoxButtons.OK)
+        End If
     End Sub
 
     Private Sub btnThoat_Click(sender As Object, e As EventArgs) Handles btnThoat.Click

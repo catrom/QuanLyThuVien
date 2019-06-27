@@ -32,4 +32,12 @@ Public Class DangNhapBus
         Return vt.getByMaVaiTro(nguoidung.VaiTro, vaitro)
     End Function
 
+    Public Function insert(value As DangNhapDTO) As Result
+        Return dn.insert(value)
+    End Function
+
+    Public Function buildMaDangNhap(ByRef value As String) As Result
+        Return dn.buildMaDangNhap(value)
+    End Function
+
 End Class

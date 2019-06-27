@@ -124,8 +124,10 @@
   <data name="BunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA+SURBVChTjcOhEQAwCAPA7D8YCoVDoXAoFC4dofm7B0W4
-        Oyqxu1RiZqhEd1OJqqISmUklIoJKuDuVMDP+Gx/XWWzAOfMINwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVChTjc5BEcQgEETRMYAAEIABBICAIAADEUAEBAEx
+        gAAQAAIwgIEYwEbv7o0c2MqcX/V8+h4YY+CcQ0oJpRSMMdi2Dc457PuO4zhAPySEeCBr7QOFEEDzktb6
+        seS9x3meuK4L9AbFGEGrphnlnEGrphnVWkH/3qWUUEpBaw30BvXeQaumGd33DVo1zWiMgQ9kLun1PQfq
+        qAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnDocGia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

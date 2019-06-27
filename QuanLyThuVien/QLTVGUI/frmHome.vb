@@ -31,7 +31,7 @@ Public Class frmHome
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnLogo_Click(sender As Object, e As EventArgs)
+    Private Sub btnLogo_Click(sender As Object, e As EventArgs) Handles btnLogo.Click
         fpnZone.Controls.Clear()
         Dim ucThuVien As New ucThuVien
         fpnZone.Controls.Add(ucThuVien)
@@ -41,8 +41,10 @@ Public Class frmHome
     Private Sub UnSelectedAll()
         btnNguoiDung.selected = False
         btnTraCuu.selected = False
+        btnQuanLySach.selected = False
         btnQuanLyDocGia.selected = False
         btnBaoCao.selected = False
+        btnQuyDinh.selected = False
     End Sub
 
     Private Sub lbThayDoi_Click(sender As Object, e As EventArgs)
@@ -100,5 +102,11 @@ Public Class frmHome
 
     Private Sub lbTroVe_MouseLeave(sender As Object, e As EventArgs) Handles lbTroVe.MouseLeave
         lbTroVe.ForeColor = Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+    End Sub
+
+    Private Sub btnQuyDinh_Click(sender As Object, e As EventArgs) Handles btnQuyDinh.Click
+        fpnZone.Controls.Clear()
+        Dim ucQuyDinh As New ucQuyDinh
+        fpnZone.Controls.Add(ucQuyDinh)
     End Sub
 End Class
