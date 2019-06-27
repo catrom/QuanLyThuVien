@@ -46,6 +46,7 @@ Partial Class frmHome
         Me.btnQuyDinh = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnNguoiDung = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pbMenu = New System.Windows.Forms.PictureBox()
+        Me.lbTroVe = New System.Windows.Forms.Label()
         Me.pnTaskBar.SuspendLayout()
         CType(Me.ibtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ibtnExit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +65,7 @@ Partial Class frmHome
         'pnTaskBar
         '
         Me.pnTaskBar.BackColor = System.Drawing.Color.LightGray
+        Me.pnTaskBar.Controls.Add(Me.lbTroVe)
         Me.pnTaskBar.Controls.Add(Me.lbTrangThai)
         Me.pnTaskBar.Controls.Add(Me.ibtnMinimize)
         Me.pnTaskBar.Controls.Add(Me.ibtnExit)
@@ -433,7 +435,7 @@ Partial Class frmHome
         Me.btnNguoiDung.BackColor = System.Drawing.Color.LightGray
         Me.btnNguoiDung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnNguoiDung.BorderRadius = 7
-        Me.btnNguoiDung.ButtonText = "  Thông tin người dùng"
+        Me.btnNguoiDung.ButtonText = "  Người dùng"
         Me.btnNguoiDung.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNguoiDung.DisabledColor = System.Drawing.Color.LightGray
         Me.btnNguoiDung.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -458,7 +460,7 @@ Partial Class frmHome
         Me.btnNguoiDung.selected = False
         Me.btnNguoiDung.Size = New System.Drawing.Size(220, 48)
         Me.btnNguoiDung.TabIndex = 1
-        Me.btnNguoiDung.Text = "  Thông tin người dùng"
+        Me.btnNguoiDung.Text = "  Người dùng"
         Me.btnNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNguoiDung.Textcolor = System.Drawing.Color.Black
         Me.btnNguoiDung.TextFont = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -475,6 +477,18 @@ Partial Class frmHome
         Me.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbMenu.TabIndex = 0
         Me.pbMenu.TabStop = False
+        '
+        'lbTroVe
+        '
+        Me.lbTroVe.AutoSize = True
+        Me.lbTroVe.BackColor = System.Drawing.Color.Transparent
+        Me.lbTroVe.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTroVe.ForeColor = System.Drawing.Color.Blue
+        Me.lbTroVe.Location = New System.Drawing.Point(185, 6)
+        Me.lbTroVe.Name = "lbTroVe"
+        Me.lbTroVe.Size = New System.Drawing.Size(67, 17)
+        Me.lbTroVe.TabIndex = 99
+        Me.lbTroVe.Text = "Đăng xuất"
         '
         'frmHome
         '
@@ -540,4 +554,5 @@ Partial Class frmHome
     Friend WithEvents btnThongTinDocGia As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnQuanLySach As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnQuyDinh As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents lbTroVe As Label
 End Class

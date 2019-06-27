@@ -28,17 +28,13 @@ Public Class ucTraCuuNguoiDung
     Private Sub Back(sender As Object)
         Dim parent As ucTraCuuNguoiDung
         parent = sender.Parent
-        Dim parent2 As ucThongTinNguoiDung
+        Dim parent2 As ucTraCuu
         parent2 = parent.Parent
         Dim parent3 = New FlowLayoutPanel
         parent3 = parent2.Parent
-        Dim parent4 = New frmHome
-        parent4 = parent3.Parent
-        Dim thongtin As New ucThongTinNguoiDung With {
-            .dangnhap = parent4.dangnhap
-        }
+        Dim tracuu As New ucTraCuu
         parent3.Controls.Clear()
-        parent3.Controls.Add(thongtin)
+        parent3.Controls.Add(tracuu)
     End Sub
 
     Private Sub btnTraCuu_Click(sender As Object, e As EventArgs) Handles btnTraCuu.Click

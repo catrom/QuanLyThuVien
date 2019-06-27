@@ -25,6 +25,7 @@ Public Class splashScreen
             Close()
         End If
 
+        lbTrangThaiMK.Text = ""
         pnDangNhap.Width = 0
         btnDangNhap.Focus()
         pnDangNhap.Width = 307
@@ -33,6 +34,7 @@ Public Class splashScreen
     Private Sub btnDocGia_Click(sender As Object, e As EventArgs) Handles btnDocGia.Click
         Me.Hide()
         Dim home As New frmHome
+
         home.Show()
     End Sub
 
@@ -40,7 +42,7 @@ Public Class splashScreen
         'lbStatus.Visible = False
     End Sub
 
-    Private Sub btnDangNhap_Click(sender As Object, e As EventArgs) Handles btnDangNhap.Click
+    Private Sub KiemTraDangNhap()
         If tbMaDangNhap.Text.Length = 0 Then
             lbTrangThaiMK.Text = "Mã đăng nhập không hợp lệ!"
             Return
@@ -73,34 +75,36 @@ Public Class splashScreen
         End If
     End Sub
 
-
+    Private Sub btnDangNhap_Click(sender As Object, e As EventArgs) Handles btnDangNhap.Click
+        KiemTraDangNhap()
+    End Sub
 
     Private Sub tbMatKhau_MouseHover(sender As Object, e As EventArgs) Handles tbMatKhau.MouseHover
         Dim ToolTip1 As ToolTip = New ToolTip()
         ToolTip1.SetToolTip(Me.tbMatKhau, "Nhập mật khẩu")
     End Sub
 
-    Private Sub lbThoat_Click(sender As Object, e As EventArgs)
-
+    Private Sub lbTroVe_Click(sender As Object, e As EventArgs) Handles lbTroVe.Click
+        Application.Exit()
     End Sub
 
-    Private Sub lbThoat_MouseLeave(sender As Object, e As EventArgs)
-
+    Private Sub lbTroVe_MouseHover(sender As Object, e As EventArgs) Handles lbTroVe.MouseHover
+        lbTroVe.ForeColor = Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(60, Byte), Integer))
     End Sub
 
-    Private Sub lbThoat_MouseHover(sender As Object, e As EventArgs)
-
+    Private Sub lbTroVe_MouseLeave(sender As Object, e As EventArgs) Handles lbTroVe.MouseLeave
+        lbTroVe.ForeColor = Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
     End Sub
 
-    Private Sub lbTroVe_Click(sender As Object, e As EventArgs)
-
+    Private Sub tbMaDangNhap_KeyDown(sender As Object, e As KeyEventArgs) Handles tbMaDangNhap.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            KiemTraDangNhap()
+        End If
     End Sub
 
-    Private Sub lbTroVe_MouseLeave(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub lbTroVe_MouseHover(sender As Object, e As EventArgs)
-
+    Private Sub tbMatKhau_KeyDown(sender As Object, e As KeyEventArgs) Handles tbMatKhau.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            KiemTraDangNhap()
+        End If
     End Sub
 End Class

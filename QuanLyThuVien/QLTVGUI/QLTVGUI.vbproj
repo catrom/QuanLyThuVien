@@ -181,6 +181,12 @@
     <Compile Include="ucTinhTrang.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucTraCuu.Designer.vb">
+      <DependentUpon>ucTraCuu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTraCuu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucTraCuuNguoiDung.Designer.vb">
       <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
     </Compile>
@@ -217,12 +223,6 @@
     <Compile Include="ucDocGia.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucLapTheDocGia.Designer.vb">
-      <DependentUpon>ucLapTheDocGia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucLapTheDocGia.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ucNhanTraSach.Designer.vb">
       <DependentUpon>ucNhanTraSach.vb</DependentUpon>
     </Compile>
@@ -257,12 +257,6 @@
       <DependentUpon>ucTiepNhanSachMoi.vb</DependentUpon>
     </Compile>
     <Compile Include="ucTiepNhanSachMoi.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucTimDocGia.Designer.vb">
-      <DependentUpon>ucTimDocGia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucTimDocGia.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucTraCuuSach.Designer.vb">
@@ -315,6 +309,9 @@
     <EmbeddedResource Include="ucTinhTrang.resx">
       <DependentUpon>ucTinhTrang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucTraCuu.resx">
+      <DependentUpon>ucTraCuu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuNguoiDung.resx">
       <DependentUpon>ucTraCuuNguoiDung.vb</DependentUpon>
     </EmbeddedResource>
@@ -333,9 +330,6 @@
     <EmbeddedResource Include="ucDocGia.resx">
       <DependentUpon>ucDocGia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucLapTheDocGia.resx">
-      <DependentUpon>ucLapTheDocGia.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucNhanTraSach.resx">
       <DependentUpon>ucNhanTraSach.vb</DependentUpon>
     </EmbeddedResource>
@@ -353,9 +347,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucTiepNhanSachMoi.resx">
       <DependentUpon>ucTiepNhanSachMoi.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucTimDocGia.resx">
-      <DependentUpon>ucTimDocGia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTraCuuSach.resx">
       <DependentUpon>ucTraCuuSach.vb</DependentUpon>
@@ -569,6 +560,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-remove-book-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-property-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

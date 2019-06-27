@@ -51,7 +51,7 @@ Partial Class ucQuanLySach
         Me.btnThemNhaThanhLy.ImageZoom = 20
         Me.btnThemNhaThanhLy.LabelPosition = 34
         Me.btnThemNhaThanhLy.LabelText = "Nhà Thanh Lý"
-        Me.btnThemNhaThanhLy.Location = New System.Drawing.Point(432, 133)
+        Me.btnThemNhaThanhLy.Location = New System.Drawing.Point(432, 125)
         Me.btnThemNhaThanhLy.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemNhaThanhLy.Name = "btnThemNhaThanhLy"
         Me.btnThemNhaThanhLy.Size = New System.Drawing.Size(203, 41)
@@ -70,7 +70,7 @@ Partial Class ucQuanLySach
         Me.btnThemNhaCungCap.ImageZoom = 20
         Me.btnThemNhaCungCap.LabelPosition = 34
         Me.btnThemNhaCungCap.LabelText = "Nhà Cung Cấp"
-        Me.btnThemNhaCungCap.Location = New System.Drawing.Point(432, 79)
+        Me.btnThemNhaCungCap.Location = New System.Drawing.Point(432, 71)
         Me.btnThemNhaCungCap.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemNhaCungCap.Name = "btnThemNhaCungCap"
         Me.btnThemNhaCungCap.Size = New System.Drawing.Size(203, 41)
@@ -89,7 +89,7 @@ Partial Class ucQuanLySach
         Me.btnThemNgonNgu.ImageZoom = 20
         Me.btnThemNgonNgu.LabelPosition = 34
         Me.btnThemNgonNgu.LabelText = "Ngôn Ngữ Sách"
-        Me.btnThemNgonNgu.Location = New System.Drawing.Point(432, 349)
+        Me.btnThemNgonNgu.Location = New System.Drawing.Point(432, 341)
         Me.btnThemNgonNgu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemNgonNgu.Name = "btnThemNgonNgu"
         Me.btnThemNgonNgu.Size = New System.Drawing.Size(203, 41)
@@ -108,7 +108,7 @@ Partial Class ucQuanLySach
         Me.btnThemTheLoai.ImageZoom = 20
         Me.btnThemTheLoai.LabelPosition = 34
         Me.btnThemTheLoai.LabelText = "Thể Loại Sách"
-        Me.btnThemTheLoai.Location = New System.Drawing.Point(432, 241)
+        Me.btnThemTheLoai.Location = New System.Drawing.Point(432, 233)
         Me.btnThemTheLoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemTheLoai.Name = "btnThemTheLoai"
         Me.btnThemTheLoai.Size = New System.Drawing.Size(203, 41)
@@ -127,7 +127,7 @@ Partial Class ucQuanLySach
         Me.btnThemTacGia.ImageZoom = 20
         Me.btnThemTacGia.LabelPosition = 34
         Me.btnThemTacGia.LabelText = "Tác Giả Sách"
-        Me.btnThemTacGia.Location = New System.Drawing.Point(432, 295)
+        Me.btnThemTacGia.Location = New System.Drawing.Point(432, 287)
         Me.btnThemTacGia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemTacGia.Name = "btnThemTacGia"
         Me.btnThemTacGia.Size = New System.Drawing.Size(203, 41)
@@ -146,7 +146,7 @@ Partial Class ucQuanLySach
         Me.btnThemNhaXuatBan.ImageZoom = 20
         Me.btnThemNhaXuatBan.LabelPosition = 34
         Me.btnThemNhaXuatBan.LabelText = "Nhà Xuất Bản"
-        Me.btnThemNhaXuatBan.Location = New System.Drawing.Point(432, 187)
+        Me.btnThemNhaXuatBan.Location = New System.Drawing.Point(432, 179)
         Me.btnThemNhaXuatBan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnThemNhaXuatBan.Name = "btnThemNhaXuatBan"
         Me.btnThemNhaXuatBan.Size = New System.Drawing.Size(203, 41)
@@ -165,7 +165,7 @@ Partial Class ucQuanLySach
         Me.btnTinhTrangSach.ImageZoom = 20
         Me.btnTinhTrangSach.LabelPosition = 34
         Me.btnTinhTrangSach.LabelText = "Tình Trạng Sách"
-        Me.btnTinhTrangSach.Location = New System.Drawing.Point(432, 403)
+        Me.btnTinhTrangSach.Location = New System.Drawing.Point(432, 395)
         Me.btnTinhTrangSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnTinhTrangSach.Name = "btnTinhTrangSach"
         Me.btnTinhTrangSach.Size = New System.Drawing.Size(203, 41)
@@ -184,7 +184,7 @@ Partial Class ucQuanLySach
         Me.btnTraSach.ImageZoom = 20
         Me.btnTraSach.LabelPosition = 34
         Me.btnTraSach.LabelText = "Lập phiếu trả sách"
-        Me.btnTraSach.Location = New System.Drawing.Point(67, 364)
+        Me.btnTraSach.Location = New System.Drawing.Point(67, 356)
         Me.btnTraSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnTraSach.Name = "btnTraSach"
         Me.btnTraSach.Size = New System.Drawing.Size(203, 85)
@@ -203,7 +203,7 @@ Partial Class ucQuanLySach
         Me.btnMuonSach.ImageZoom = 20
         Me.btnMuonSach.LabelPosition = 34
         Me.btnMuonSach.LabelText = "Lập phiếu mượn sách"
-        Me.btnMuonSach.Location = New System.Drawing.Point(67, 269)
+        Me.btnMuonSach.Location = New System.Drawing.Point(67, 261)
         Me.btnMuonSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnMuonSach.Name = "btnMuonSach"
         Me.btnMuonSach.Size = New System.Drawing.Size(203, 85)
@@ -222,7 +222,7 @@ Partial Class ucQuanLySach
         Me.btnXuatSach.ImageZoom = 20
         Me.btnXuatSach.LabelPosition = 34
         Me.btnXuatSach.LabelText = "Lập phiếu xuất sách"
-        Me.btnXuatSach.Location = New System.Drawing.Point(67, 174)
+        Me.btnXuatSach.Location = New System.Drawing.Point(67, 166)
         Me.btnXuatSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnXuatSach.Name = "btnXuatSach"
         Me.btnXuatSach.Size = New System.Drawing.Size(203, 85)
@@ -241,7 +241,7 @@ Partial Class ucQuanLySach
         Me.btnNhapSach.ImageZoom = 20
         Me.btnNhapSach.LabelPosition = 34
         Me.btnNhapSach.LabelText = "Lập phiếu nhập sách"
-        Me.btnNhapSach.Location = New System.Drawing.Point(67, 79)
+        Me.btnNhapSach.Location = New System.Drawing.Point(67, 71)
         Me.btnNhapSach.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnNhapSach.Name = "btnNhapSach"
         Me.btnNhapSach.Size = New System.Drawing.Size(203, 85)

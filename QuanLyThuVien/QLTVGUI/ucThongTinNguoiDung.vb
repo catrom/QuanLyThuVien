@@ -31,7 +31,6 @@ Public Class ucThongTinNguoiDung
 
         If vaitro.TenVaiTro <> "ADMIN" Then
             btnThemNguoiDung.Enabled = False
-            btnTimKiemNguoiDung.Enabled = False
         End If
 
         If vaitro.TenVaiTro <> "ĐỘC GIẢ" Then
@@ -41,12 +40,14 @@ Public Class ucThongTinNguoiDung
 
     Private Sub btnThemNguoiDung_Click(sender As Object, e As EventArgs) Handles btnThemNguoiDung.Click
         Me.Controls.Clear()
-        Dim ucThemNguoiDung As New ucThemNguoiDung
+        Dim ucThemNguoiDung As New ucThemNguoiDung With {
+            .isLapTheDocGia = False
+        }
         Me.Controls.Add(ucThemNguoiDung)
         ucThemNguoiDung.BringToFront()
     End Sub
 
-    Private Sub btnTimKiemNguoiDung_Click(sender As Object, e As EventArgs) Handles btnTimKiemNguoiDung.Click
+    Private Sub btnTimKiemNguoiDung_Click(sender As Object, e As EventArgs)
         Me.Controls.Clear()
         Dim ucTraCuu As New ucTraCuuNguoiDung
         Me.Controls.Add(ucTraCuu)

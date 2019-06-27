@@ -6,11 +6,13 @@ Imports System.Diagnostics
 Public Class ucThuVien
     Dim ctpmBus As ChiTietPhieuMuonBUS
     Dim sachBus As DauSachBUS
+    Dim ngBus As NguoiDungBUS
 
     Private Sub ucThuVien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim result As Result
         ctpmBus = New ChiTietPhieuMuonBUS()
         sachBus = New DauSachBUS()
+        ngBus = New NguoiDungBUS()
 
         ' Hien thi so dau sach
         Dim listSach As New List(Of DauSachDTO)
@@ -22,12 +24,11 @@ Public Class ucThuVien
             Return
         End If
 
-        lbSoDauSach.Text = (listSach.Count - 1).ToString()
+        lbSoDauSach.Text = listSach.Count.ToString()
 
         ' Hien thi so doc gia
-        Dim listDocGia As List(Of DocGiaDTO)
-        listDocGia = New List(Of DocGiaDTO)
-        'result = dgBus.selectAll(listDocGia)
+        Dim listDocGia As New List(Of NguoiDungDTO)
+        result = ngBus.selectAllDocGia(listDocGia)
 
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách độc giả thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -35,7 +36,7 @@ Public Class ucThuVien
             Return
         End If
 
-        lbSoDocGia.Text = (listDocGia.Count - 1).ToString()
+        lbSoDocGia.Text = listDocGia.Count.ToString()
 
         ' Hien thi so luot muon
         Dim listctpm As List(Of ChiTietPhieuMuonDTO)
@@ -51,7 +52,7 @@ Public Class ucThuVien
         lbSoLuotMuon.Text = listctpm.Count.ToString()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Process.Start("https://github.com/catrom/QuanLyThuVien")
     End Sub
 End Class

@@ -23,73 +23,77 @@ Partial Class ucBaoCao
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBaoCao))
-        Me.btnBaoCaoSachMuon = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.btnBaoCaoSachTre = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.btnThongKeTraTre = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.btnThongKeTheLoai = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.SuspendLayout()
         '
-        'btnBaoCaoSachMuon
+        'btnThongKeTraTre
         '
-        Me.btnBaoCaoSachMuon.ActiveBorderThickness = 1
-        Me.btnBaoCaoSachMuon.ActiveCornerRadius = 20
-        Me.btnBaoCaoSachMuon.ActiveFillColor = System.Drawing.Color.DimGray
-        Me.btnBaoCaoSachMuon.ActiveForecolor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachMuon.ActiveLineColor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachMuon.BackColor = System.Drawing.SystemColors.Control
-        Me.btnBaoCaoSachMuon.BackgroundImage = CType(resources.GetObject("btnBaoCaoSachMuon.BackgroundImage"), System.Drawing.Image)
-        Me.btnBaoCaoSachMuon.ButtonText = "Báo cáo thống kê tình hình mượn sách theo thể loại"
-        Me.btnBaoCaoSachMuon.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBaoCaoSachMuon.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBaoCaoSachMuon.ForeColor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachMuon.IdleBorderThickness = 1
-        Me.btnBaoCaoSachMuon.IdleCornerRadius = 7
-        Me.btnBaoCaoSachMuon.IdleFillColor = System.Drawing.Color.LightGray
-        Me.btnBaoCaoSachMuon.IdleForecolor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachMuon.IdleLineColor = System.Drawing.Color.Silver
-        Me.btnBaoCaoSachMuon.Location = New System.Drawing.Point(135, 166)
-        Me.btnBaoCaoSachMuon.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnBaoCaoSachMuon.Name = "btnBaoCaoSachMuon"
-        Me.btnBaoCaoSachMuon.Size = New System.Drawing.Size(150, 150)
-        Me.btnBaoCaoSachMuon.TabIndex = 1
-        Me.btnBaoCaoSachMuon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnThongKeTraTre.BackColor = System.Drawing.Color.LightGray
+        Me.btnThongKeTraTre.color = System.Drawing.Color.LightGray
+        Me.btnThongKeTraTre.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThongKeTraTre.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThongKeTraTre.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThongKeTraTre.ForeColor = System.Drawing.Color.Black
+        Me.btnThongKeTraTre.Image = Nothing
+        Me.btnThongKeTraTre.ImagePosition = 5
+        Me.btnThongKeTraTre.ImageZoom = 20
+        Me.btnThongKeTraTre.LabelPosition = 34
+        Me.btnThongKeTraTre.LabelText = "Thống kê sách trả trễ theo ngày"
+        Me.btnThongKeTraTre.Location = New System.Drawing.Point(67, 124)
+        Me.btnThongKeTraTre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThongKeTraTre.Name = "btnThongKeTraTre"
+        Me.btnThongKeTraTre.Size = New System.Drawing.Size(355, 41)
+        Me.btnThongKeTraTre.TabIndex = 21
         '
-        'btnBaoCaoSachTre
+        'btnThongKeTheLoai
         '
-        Me.btnBaoCaoSachTre.ActiveBorderThickness = 1
-        Me.btnBaoCaoSachTre.ActiveCornerRadius = 20
-        Me.btnBaoCaoSachTre.ActiveFillColor = System.Drawing.Color.DimGray
-        Me.btnBaoCaoSachTre.ActiveForecolor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachTre.ActiveLineColor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachTre.BackColor = System.Drawing.SystemColors.Control
-        Me.btnBaoCaoSachTre.BackgroundImage = CType(resources.GetObject("btnBaoCaoSachTre.BackgroundImage"), System.Drawing.Image)
-        Me.btnBaoCaoSachTre.ButtonText = "Báo cáo thống kê sách trả trễ"
-        Me.btnBaoCaoSachTre.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBaoCaoSachTre.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBaoCaoSachTre.ForeColor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachTre.IdleBorderThickness = 1
-        Me.btnBaoCaoSachTre.IdleCornerRadius = 7
-        Me.btnBaoCaoSachTre.IdleFillColor = System.Drawing.Color.LightGray
-        Me.btnBaoCaoSachTre.IdleForecolor = System.Drawing.Color.Black
-        Me.btnBaoCaoSachTre.IdleLineColor = System.Drawing.Color.Silver
-        Me.btnBaoCaoSachTre.Location = New System.Drawing.Point(415, 166)
-        Me.btnBaoCaoSachTre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnBaoCaoSachTre.Name = "btnBaoCaoSachTre"
-        Me.btnBaoCaoSachTre.Size = New System.Drawing.Size(150, 150)
-        Me.btnBaoCaoSachTre.TabIndex = 1
-        Me.btnBaoCaoSachTre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnThongKeTheLoai.BackColor = System.Drawing.Color.LightGray
+        Me.btnThongKeTheLoai.color = System.Drawing.Color.LightGray
+        Me.btnThongKeTheLoai.colorActive = System.Drawing.SystemColors.ActiveBorder
+        Me.btnThongKeTheLoai.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThongKeTheLoai.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThongKeTheLoai.ForeColor = System.Drawing.Color.Black
+        Me.btnThongKeTheLoai.Image = Nothing
+        Me.btnThongKeTheLoai.ImagePosition = 5
+        Me.btnThongKeTheLoai.ImageZoom = 20
+        Me.btnThongKeTheLoai.LabelPosition = 34
+        Me.btnThongKeTheLoai.LabelText = "Thống kê tình hình mượn sách theo thể loại"
+        Me.btnThongKeTheLoai.Location = New System.Drawing.Point(67, 70)
+        Me.btnThongKeTheLoai.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnThongKeTheLoai.Name = "btnThongKeTheLoai"
+        Me.btnThongKeTheLoai.Size = New System.Drawing.Size(355, 41)
+        Me.btnThongKeTheLoai.TabIndex = 22
+        '
+        'BunifuGradientPanel1
+        '
+        Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Silver
+        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Silver
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Silver
+        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Silver
+        Me.BunifuGradientPanel1.Location = New System.Drawing.Point(55, 70)
+        Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
+        Me.BunifuGradientPanel1.Quality = 10
+        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(5, 387)
+        Me.BunifuGradientPanel1.TabIndex = 20
         '
         'ucBaoCao
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.Controls.Add(Me.btnBaoCaoSachTre)
-        Me.Controls.Add(Me.btnBaoCaoSachMuon)
+        Me.Controls.Add(Me.btnThongKeTraTre)
+        Me.Controls.Add(Me.btnThongKeTheLoai)
+        Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Name = "ucBaoCao"
         Me.Size = New System.Drawing.Size(700, 530)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btnBaoCaoSachMuon As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents btnBaoCaoSachTre As Bunifu.Framework.UI.BunifuThinButton2
+    Public WithEvents btnThongKeTraTre As Bunifu.Framework.UI.BunifuTileButton
+    Public WithEvents btnThongKeTheLoai As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
 End Class

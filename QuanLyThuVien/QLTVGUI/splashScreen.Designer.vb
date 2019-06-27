@@ -29,6 +29,7 @@ Partial Class splashScreen
         Me.pnDangNhap = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lbTroVe = New System.Windows.Forms.Label()
         Me.btnDocGia = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btnDangNhap = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -98,6 +99,7 @@ Partial Class splashScreen
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.lbTroVe)
         Me.Panel3.Controls.Add(Me.btnDocGia)
         Me.Panel3.Controls.Add(Me.btnDangNhap)
         Me.Panel3.Controls.Add(Me.Label3)
@@ -110,6 +112,18 @@ Partial Class splashScreen
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(241, 424)
         Me.Panel3.TabIndex = 1
+        '
+        'lbTroVe
+        '
+        Me.lbTroVe.AutoSize = True
+        Me.lbTroVe.BackColor = System.Drawing.Color.Transparent
+        Me.lbTroVe.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTroVe.ForeColor = System.Drawing.Color.Blue
+        Me.lbTroVe.Location = New System.Drawing.Point(195, 403)
+        Me.lbTroVe.Name = "lbTroVe"
+        Me.lbTroVe.Size = New System.Drawing.Size(41, 17)
+        Me.lbTroVe.TabIndex = 100
+        Me.lbTroVe.Text = "Thoát"
         '
         'btnDocGia
         '
@@ -314,4 +328,5 @@ Partial Class splashScreen
     Friend WithEvents btnDocGia As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents BunifuDragControl3 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents lbTrangThaiMK As Label
+    Friend WithEvents lbTroVe As Label
 End Class

@@ -80,16 +80,8 @@ Public Class ucBaoCaoSachTre
         Dim grgrgrpar = New frmHome
         grgrgrpar = grgrpar.Parent
         grgrgrpar.btnNguoiDung.selected = False
-        Dim ucThuVien As New ucThuVien
-        grgrpar.Controls.Add(ucThuVien)
-
-        'grgrgrpar.btnNguoiDung.selected = False
-        'grgrgrpar.btnTiepNhanSachMoi.selected = False
-        'grgrgrpar.btnTraCuu.selected = False
-        'grgrgrpar.btnQuanLyDocGia.selected = False
-        'grgrgrpar.btnNhanTraSach.selected = False
-        'grgrgrpar.btnBaoCao.selected = False
-        'grgrgrpar.btnDangXuat.selected = False
+        Dim ucBaoCao As New ucBaoCao
+        grgrpar.Controls.Add(ucBaoCao)
     End Sub
 
     Private Sub ucBaoCaoSachTre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -181,7 +173,7 @@ Public Class ucBaoCaoSachTre
 
             ''''
             ' rows on datagrid
-            For i As Integer = 0 To dgThongKe.Rows.Count - 2
+            For i As Integer = 0 To dgThongKe.Rows.Count - 1
                 For j As Integer = 0 To dgThongKe.Columns.Count - 1
                     pdfcell = New PdfPCell(New Phrase(dgThongKe(j, i).Value.ToString(), fntNormal))
                     pdftable.HorizontalAlignment = PdfPCell.ALIGN_LEFT

@@ -75,4 +75,30 @@ Public Class frmHome
 
         fpnZone.Controls.Add(ucQuanLySach)
     End Sub
+
+    Private Sub btnBaoCao_Click(sender As Object, e As EventArgs) Handles btnBaoCao.Click
+        fpnZone.Controls.Clear()
+        Dim ucBaoCao As New ucBaoCao
+        fpnZone.Controls.Add(ucBaoCao)
+    End Sub
+
+    Private Sub btnTraCuu_Click(sender As Object, e As EventArgs) Handles btnTraCuu.Click
+        fpnZone.Controls.Clear()
+        Dim ucTraCuu As New ucTraCuu
+        fpnZone.Controls.Add(ucTraCuu)
+    End Sub
+
+    Private Sub lbTroVe_Click(sender As Object, e As EventArgs) Handles lbTroVe.Click
+        Me.Hide()
+        Dim splash As New splashScreen
+        splash.Show()
+    End Sub
+
+    Private Sub lbTroVe_MouseHover(sender As Object, e As EventArgs) Handles lbTroVe.MouseHover
+        lbTroVe.ForeColor = Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(60, Byte), Integer))
+    End Sub
+
+    Private Sub lbTroVe_MouseLeave(sender As Object, e As EventArgs) Handles lbTroVe.MouseLeave
+        lbTroVe.ForeColor = Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+    End Sub
 End Class

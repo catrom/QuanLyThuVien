@@ -4,7 +4,7 @@ Imports QLTVBus
 Public Class ucThemNguoiDung
     Private vaitroBus As New VaiTroBUS
     Private nguoidungBus As New NguoiDungBUS
-    Public themDocGia As New Boolean
+    Public isLapTheDocGia As New Boolean
 
     Private Sub ucThemNguoiDung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'cbVaiTro
@@ -15,8 +15,9 @@ Public Class ucThemNguoiDung
         cbVaiTro.DisplayMember = "tenvaitro"
         cbVaiTro.ValueMember = "mavaitro"
 
-        If themDocGia = True Then
+        If isLapTheDocGia = True Then
             cbVaiTro.SelectedValue = "VT000006"
+            cbVaiTro.Enabled = False
         End If
 
         'lbMaNguoiDung
@@ -53,12 +54,22 @@ Public Class ucThemNguoiDung
         Else
             MessageBox.Show("Lưu người dùng thành công!", "Thông tin", MessageBoxButtons.OK)
         End If
-        Back(sender)
 
+        If isLapTheDocGia = False Then
+            Back(sender)
+            Return
+        End If
+
+        Back2(sender)
     End Sub
 
     Private Sub btnThoat_Click(sender As Object, e As EventArgs) Handles btnThoat.Click
-        Back(sender)
+        If isLapTheDocGia = False Then
+            Back(sender)
+            Return
+        End If
+
+        Back2(sender)
     End Sub
 
     Private Sub Back(sender As Object)
@@ -75,5 +86,19 @@ Public Class ucThemNguoiDung
         }
         parent3.Controls.Clear()
         parent3.Controls.Add(thongtin)
+    End Sub
+
+    Private Sub Back2(sender As Object)
+        Dim parent As ucThemNguoiDung
+        parent = sender.Parent
+        Dim parent2 As ucDocGia
+        parent2 = parent.Parent
+        Dim parent3 = New FlowLayoutPanel
+        parent3 = parent2.Parent
+        Dim parent4 = New frmHome
+        parent4 = parent3.Parent
+        Dim ucdocgia As New ucDocGia
+        parent3.Controls.Clear()
+        parent3.Controls.Add(ucdocgia)
     End Sub
 End Class

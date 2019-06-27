@@ -35,11 +35,9 @@ Partial Class ucThuVien
         Me.BunifuGradientPanel3 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbSoLuotMuon = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
@@ -199,51 +197,6 @@ Partial Class ucThuVien
         Me.lbSoLuotMuon.TabIndex = 2
         Me.lbSoLuotMuon.Text = "X"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(219, 335)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 15)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Nhóm tác giả:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(219, 429)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 15)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Đề tài môn học:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(219, 355)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(180, 60)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Phan Thanh Tùng       - 16521399" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nguyễn Tây Trung      - 16521319" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Lê Việt Hoàng" &
-    "              - 16520434" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Đỗ Ngọc Bích Trâm     - 16521273" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(219, 453)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(276, 30)
-        Me.Label9.TabIndex = 3
-        Me.Label9.Text = "Phương pháp mô hình hoá," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Trường Đại học Công nghệ thông tin - DHQG HCM"
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -253,6 +206,29 @@ Partial Class ucThuVien
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(0, 15)
         Me.Label10.TabIndex = 3
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(219, 339)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(276, 30)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "Phân tích - thiết kế hệ thống thông tin," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Trường Đại học Công nghệ thông tin - DH" &
+    "QG HCM"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Blue
+        Me.Label4.Location = New System.Drawing.Point(219, 379)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(297, 21)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "github.com/catrom/QuanLyThuVien"
         '
         'ucThuVien
         '
@@ -265,8 +241,6 @@ Partial Class ucThuVien
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -296,9 +270,7 @@ Partial Class ucThuVien
     Friend WithEvents BunifuGradientPanel3 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents lbSoLuotMuon As System.Windows.Forms.Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label4 As Label
 End Class

@@ -24,19 +24,18 @@ Public Class ChiTietPhieuMuonBUS
         Return ctpmDAL.insert(ctpm)
     End Function
 
-    Public Function baocao1(month As String, year As String, ByRef listten As List(Of String), ByRef listsoluotmuon As List(Of Integer))
-        Return ctpmDAL.baocao1(month, year, listten, listsoluotmuon)
+    Public Function baocao_TheoTheLoai_ThangNam(month As Integer, year As Integer, ByRef list As List(Of TheLoaiDTO), ByRef listsoluotmuon As List(Of Integer))
+        Return ctpmDAL.baocao_TheoTheLoai_ThangNam(month, year, list, listsoluotmuon)
     End Function
 
-    Public Function baocao2(month As String, ByRef listten As List(Of String), ByRef listsoluotmuon As List(Of Integer))
-        Return ctpmDAL.baocao2(month, listten, listsoluotmuon)
+    Public Function baocao_TheoTheLoai_Thang(month As Integer, ByRef list As List(Of TheLoaiDTO), ByRef listsoluotmuon As List(Of Integer))
+        Return ctpmDAL.baocao_TheoTheLoai_Thang(month, list, listsoluotmuon)
+    End Function
+    Public Function baocao_TheoTheLoai_Nam(year As Integer, ByRef list As List(Of TheLoaiDTO), ByRef listsoluotmuon As List(Of Integer))
+        Return ctpmDAL.baocao_TheoTheLoai_Nam(year, list, listsoluotmuon)
+    End Function
+    Public Function baocao_TheoTheLoai(ByRef list As List(Of TheLoaiDTO), ByRef listsoluotmuon As List(Of Integer))
+        Return ctpmDAL.baocao_TheoTheLoai(list, listsoluotmuon)
     End Function
 
-    Public Function baocao3(year As String, ByRef listten As List(Of String), ByRef listsoluotmuon As List(Of Integer))
-        Return ctpmDAL.baocao3(year, listten, listsoluotmuon)
-    End Function
-
-    Public Function baocao4(ByRef listten As List(Of String), ByRef listsoluotmuon As List(Of Integer))
-        Return ctpmDAL.baocao4(listten, listsoluotmuon)
-    End Function
 End Class

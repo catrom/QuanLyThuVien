@@ -55,6 +55,10 @@ Public Class NguoiDungBUS
         Return nd.update(value)
     End Function
 
+    Public Function selectALLDocGia(ByRef listDocGia As List(Of NguoiDungDTO)) As Result
+        Return nd.selectALLDocGia(listDocGia)
+    End Function
+
     Public Function getNgayTao_ByMaNguoiDung(manguoidung As String, ByRef ngaytao As Date)
         Return nd.getNgayTao_ByMaNguoiDung(manguoidung, ngaytao)
     End Function

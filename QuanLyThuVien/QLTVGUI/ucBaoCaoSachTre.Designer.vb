@@ -34,10 +34,10 @@ Partial Class ucBaoCaoSachTre
         Me.SoNgayTraTre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnThoat = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnXuatBaoCao = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.dtpNgay = New System.Windows.Forms.DateTimePicker()
         Me.btnThongKe = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnThoat = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnXuatBaoCao = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgThongKe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -160,76 +160,6 @@ Partial Class ucBaoCaoSachTre
         Me.Label1.TabIndex = 36
         Me.Label1.Text = "BÁO CÁO THỐNG KÊ SÁCH TRẢ TRỄ"
         '
-        'btnThoat
-        '
-        Me.btnThoat.Activecolor = System.Drawing.Color.Silver
-        Me.btnThoat.BackColor = System.Drawing.Color.LightGray
-        Me.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnThoat.BorderRadius = 7
-        Me.btnThoat.ButtonText = "Thoát"
-        Me.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnThoat.DisabledColor = System.Drawing.Color.Silver
-        Me.btnThoat.ForeColor = System.Drawing.Color.Black
-        Me.btnThoat.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnThoat.Iconimage = Global.QLTVGUI.My.Resources.Resources.icons8_Enter_64
-        Me.btnThoat.Iconimage_right = Nothing
-        Me.btnThoat.Iconimage_right_Selected = Nothing
-        Me.btnThoat.Iconimage_Selected = Nothing
-        Me.btnThoat.IconMarginLeft = 0
-        Me.btnThoat.IconMarginRight = 0
-        Me.btnThoat.IconRightVisible = True
-        Me.btnThoat.IconRightZoom = 0R
-        Me.btnThoat.IconVisible = True
-        Me.btnThoat.IconZoom = 60.0R
-        Me.btnThoat.IsTab = False
-        Me.btnThoat.Location = New System.Drawing.Point(451, 473)
-        Me.btnThoat.Name = "btnThoat"
-        Me.btnThoat.Normalcolor = System.Drawing.Color.LightGray
-        Me.btnThoat.OnHovercolor = System.Drawing.Color.Gray
-        Me.btnThoat.OnHoverTextColor = System.Drawing.Color.Black
-        Me.btnThoat.selected = False
-        Me.btnThoat.Size = New System.Drawing.Size(140, 41)
-        Me.btnThoat.TabIndex = 42
-        Me.btnThoat.Text = "Thoát"
-        Me.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnThoat.Textcolor = System.Drawing.Color.Black
-        Me.btnThoat.TextFont = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
-        'btnXuatBaoCao
-        '
-        Me.btnXuatBaoCao.Activecolor = System.Drawing.Color.Silver
-        Me.btnXuatBaoCao.BackColor = System.Drawing.Color.LightGray
-        Me.btnXuatBaoCao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnXuatBaoCao.BorderRadius = 7
-        Me.btnXuatBaoCao.ButtonText = "Xuất báo cáo"
-        Me.btnXuatBaoCao.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnXuatBaoCao.DisabledColor = System.Drawing.Color.Silver
-        Me.btnXuatBaoCao.ForeColor = System.Drawing.Color.Black
-        Me.btnXuatBaoCao.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnXuatBaoCao.Iconimage = Global.QLTVGUI.My.Resources.Resources.icons8_Save_64
-        Me.btnXuatBaoCao.Iconimage_right = Nothing
-        Me.btnXuatBaoCao.Iconimage_right_Selected = Nothing
-        Me.btnXuatBaoCao.Iconimage_Selected = Nothing
-        Me.btnXuatBaoCao.IconMarginLeft = 0
-        Me.btnXuatBaoCao.IconMarginRight = 0
-        Me.btnXuatBaoCao.IconRightVisible = True
-        Me.btnXuatBaoCao.IconRightZoom = 0R
-        Me.btnXuatBaoCao.IconVisible = True
-        Me.btnXuatBaoCao.IconZoom = 60.0R
-        Me.btnXuatBaoCao.IsTab = False
-        Me.btnXuatBaoCao.Location = New System.Drawing.Point(109, 473)
-        Me.btnXuatBaoCao.Name = "btnXuatBaoCao"
-        Me.btnXuatBaoCao.Normalcolor = System.Drawing.Color.LightGray
-        Me.btnXuatBaoCao.OnHovercolor = System.Drawing.Color.Gray
-        Me.btnXuatBaoCao.OnHoverTextColor = System.Drawing.Color.Black
-        Me.btnXuatBaoCao.selected = False
-        Me.btnXuatBaoCao.Size = New System.Drawing.Size(140, 41)
-        Me.btnXuatBaoCao.TabIndex = 43
-        Me.btnXuatBaoCao.Text = "Xuất báo cáo"
-        Me.btnXuatBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnXuatBaoCao.Textcolor = System.Drawing.Color.Black
-        Me.btnXuatBaoCao.TextFont = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
         'dtpNgay
         '
         Me.dtpNgay.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
@@ -278,6 +208,76 @@ Partial Class ucBaoCaoSachTre
         Me.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnThongKe.Textcolor = System.Drawing.Color.Black
         Me.btnThongKe.TextFont = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'btnThoat
+        '
+        Me.btnThoat.Activecolor = System.Drawing.Color.Silver
+        Me.btnThoat.BackColor = System.Drawing.Color.LightGray
+        Me.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnThoat.BorderRadius = 7
+        Me.btnThoat.ButtonText = "Thoát"
+        Me.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnThoat.DisabledColor = System.Drawing.Color.Silver
+        Me.btnThoat.ForeColor = System.Drawing.Color.Black
+        Me.btnThoat.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnThoat.Iconimage = Global.QLTVGUI.My.Resources.Resources.icons8_Enter_64
+        Me.btnThoat.Iconimage_right = Nothing
+        Me.btnThoat.Iconimage_right_Selected = Nothing
+        Me.btnThoat.Iconimage_Selected = Nothing
+        Me.btnThoat.IconMarginLeft = 0
+        Me.btnThoat.IconMarginRight = 0
+        Me.btnThoat.IconRightVisible = True
+        Me.btnThoat.IconRightZoom = 0R
+        Me.btnThoat.IconVisible = True
+        Me.btnThoat.IconZoom = 60.0R
+        Me.btnThoat.IsTab = False
+        Me.btnThoat.Location = New System.Drawing.Point(444, 472)
+        Me.btnThoat.Name = "btnThoat"
+        Me.btnThoat.Normalcolor = System.Drawing.Color.LightGray
+        Me.btnThoat.OnHovercolor = System.Drawing.Color.Gray
+        Me.btnThoat.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnThoat.selected = False
+        Me.btnThoat.Size = New System.Drawing.Size(150, 41)
+        Me.btnThoat.TabIndex = 42
+        Me.btnThoat.Text = "Thoát"
+        Me.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnThoat.Textcolor = System.Drawing.Color.Black
+        Me.btnThoat.TextFont = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'btnXuatBaoCao
+        '
+        Me.btnXuatBaoCao.Activecolor = System.Drawing.Color.Silver
+        Me.btnXuatBaoCao.BackColor = System.Drawing.Color.LightGray
+        Me.btnXuatBaoCao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnXuatBaoCao.BorderRadius = 7
+        Me.btnXuatBaoCao.ButtonText = "Xuất báo cáo"
+        Me.btnXuatBaoCao.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnXuatBaoCao.DisabledColor = System.Drawing.Color.Silver
+        Me.btnXuatBaoCao.ForeColor = System.Drawing.Color.Black
+        Me.btnXuatBaoCao.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnXuatBaoCao.Iconimage = Global.QLTVGUI.My.Resources.Resources.icons8_Save_64
+        Me.btnXuatBaoCao.Iconimage_right = Nothing
+        Me.btnXuatBaoCao.Iconimage_right_Selected = Nothing
+        Me.btnXuatBaoCao.Iconimage_Selected = Nothing
+        Me.btnXuatBaoCao.IconMarginLeft = 0
+        Me.btnXuatBaoCao.IconMarginRight = 0
+        Me.btnXuatBaoCao.IconRightVisible = True
+        Me.btnXuatBaoCao.IconRightZoom = 0R
+        Me.btnXuatBaoCao.IconVisible = True
+        Me.btnXuatBaoCao.IconZoom = 60.0R
+        Me.btnXuatBaoCao.IsTab = False
+        Me.btnXuatBaoCao.Location = New System.Drawing.Point(102, 472)
+        Me.btnXuatBaoCao.Name = "btnXuatBaoCao"
+        Me.btnXuatBaoCao.Normalcolor = System.Drawing.Color.LightGray
+        Me.btnXuatBaoCao.OnHovercolor = System.Drawing.Color.Gray
+        Me.btnXuatBaoCao.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnXuatBaoCao.selected = False
+        Me.btnXuatBaoCao.Size = New System.Drawing.Size(150, 41)
+        Me.btnXuatBaoCao.TabIndex = 43
+        Me.btnXuatBaoCao.Text = "Xuất báo cáo"
+        Me.btnXuatBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnXuatBaoCao.Textcolor = System.Drawing.Color.Black
+        Me.btnXuatBaoCao.TextFont = New System.Drawing.Font("Segoe UI", 12.0!)
         '
         'ucBaoCaoSachTre
         '

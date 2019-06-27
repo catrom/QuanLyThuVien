@@ -74,7 +74,6 @@
     <Compile Include="DauSach_NgonNguDTO.vb" />
     <Compile Include="DauSach_TacGiaDTO.vb" />
     <Compile Include="DauSach_TheLoaiDTO.vb" />
-    <Compile Include="DocGiaDTO.vb" />
     <Compile Include="LoaiDocGiaDTO.vb" />
     <Compile Include="LoaiTaiKhoanDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

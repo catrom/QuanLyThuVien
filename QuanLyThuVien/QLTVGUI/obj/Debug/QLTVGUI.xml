@@ -247,6 +247,11 @@ QLTVGUI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:QLTVGUI.My.Resources.Resources.icons8_search_property_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:QLTVGUI.My.Resources.Resources.icons8_Search1_64">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

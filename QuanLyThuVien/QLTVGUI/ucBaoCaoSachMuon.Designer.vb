@@ -32,17 +32,16 @@ Partial Class ucBaoCaoSachMuon
         Me.tbThang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.tbNam = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dgThongKe = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.TenTheLoai = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SoLuotMuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TiLe = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.labellb = New System.Windows.Forms.Label()
         Me.lbTongLuotMuon = New System.Windows.Forms.Label()
+        Me.dgThongKe = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.MaTheLoai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ten = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoLuotMuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TiLe = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnThoat = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnThongKe = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnXuatBaoCao = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.dgThongKe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -124,18 +123,29 @@ Partial Class ucBaoCaoSachMuon
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "Năm:"
         '
-        'GroupBox1
+        'labellb
         '
-        Me.GroupBox1.Controls.Add(Me.dgThongKe)
-        Me.GroupBox1.Controls.Add(Me.labellb)
-        Me.GroupBox1.Controls.Add(Me.lbTongLuotMuon)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(49, 155)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(602, 288)
-        Me.GroupBox1.TabIndex = 33
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Thống kê:"
+        Me.labellb.AutoSize = True
+        Me.labellb.BackColor = System.Drawing.Color.Transparent
+        Me.labellb.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labellb.ForeColor = System.Drawing.Color.Black
+        Me.labellb.Location = New System.Drawing.Point(412, 391)
+        Me.labellb.Name = "labellb"
+        Me.labellb.Size = New System.Drawing.Size(128, 17)
+        Me.labellb.TabIndex = 74
+        Me.labellb.Text = "Tổng số lượt mượn: "
+        '
+        'lbTongLuotMuon
+        '
+        Me.lbTongLuotMuon.BackColor = System.Drawing.Color.Transparent
+        Me.lbTongLuotMuon.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTongLuotMuon.ForeColor = System.Drawing.Color.MediumBlue
+        Me.lbTongLuotMuon.Location = New System.Drawing.Point(538, 388)
+        Me.lbTongLuotMuon.Name = "lbTongLuotMuon"
+        Me.lbTongLuotMuon.Size = New System.Drawing.Size(53, 21)
+        Me.lbTongLuotMuon.TabIndex = 75
+        Me.lbTongLuotMuon.Text = "sum"
+        Me.lbTongLuotMuon.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'dgThongKe
         '
@@ -143,7 +153,7 @@ Partial Class ucBaoCaoSachMuon
         Me.dgThongKe.AllowUserToDeleteRows = False
         Me.dgThongKe.AllowUserToResizeColumns = False
         Me.dgThongKe.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
@@ -155,20 +165,20 @@ Partial Class ucBaoCaoSachMuon
         Me.dgThongKe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgThongKe.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgThongKe.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TenTheLoai, Me.SoLuotMuon, Me.TiLe})
+        Me.dgThongKe.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MaTheLoai, Me.Ten, Me.SoLuotMuon, Me.TiLe})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgThongKe.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgThongKe.DoubleBuffered = True
@@ -176,16 +186,15 @@ Partial Class ucBaoCaoSachMuon
         Me.dgThongKe.GridColor = System.Drawing.Color.Gray
         Me.dgThongKe.HeaderBgColor = System.Drawing.Color.DarkGray
         Me.dgThongKe.HeaderForeColor = System.Drawing.Color.Black
-        Me.dgThongKe.Location = New System.Drawing.Point(55, 46)
+        Me.dgThongKe.Location = New System.Drawing.Point(93, 173)
         Me.dgThongKe.Name = "dgThongKe"
-        Me.dgThongKe.ReadOnly = True
         Me.dgThongKe.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgThongKe.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
@@ -194,56 +203,35 @@ Partial Class ucBaoCaoSachMuon
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
         Me.dgThongKe.RowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgThongKe.Size = New System.Drawing.Size(493, 192)
-        Me.dgThongKe.TabIndex = 72
+        Me.dgThongKe.Size = New System.Drawing.Size(525, 197)
+        Me.dgThongKe.TabIndex = 87
         '
-        'TenTheLoai
+        'MaTheLoai
         '
-        Me.TenTheLoai.Frozen = True
-        Me.TenTheLoai.HeaderText = "Tên Thể Loại"
-        Me.TenTheLoai.Name = "TenTheLoai"
-        Me.TenTheLoai.ReadOnly = True
-        Me.TenTheLoai.Width = 200
+        Me.MaTheLoai.HeaderText = "Mã thể loại"
+        Me.MaTheLoai.Name = "MaTheLoai"
+        Me.MaTheLoai.ReadOnly = True
+        Me.MaTheLoai.Width = 110
+        '
+        'Ten
+        '
+        Me.Ten.HeaderText = "Tên thể loại"
+        Me.Ten.Name = "Ten"
+        Me.Ten.ReadOnly = True
+        Me.Ten.Width = 150
         '
         'SoLuotMuon
         '
-        Me.SoLuotMuon.Frozen = True
-        Me.SoLuotMuon.HeaderText = "Số Lượt Mượn"
+        Me.SoLuotMuon.HeaderText = "Số lượt mượn"
         Me.SoLuotMuon.Name = "SoLuotMuon"
         Me.SoLuotMuon.ReadOnly = True
-        Me.SoLuotMuon.Width = 150
+        Me.SoLuotMuon.Width = 120
         '
         'TiLe
         '
-        Me.TiLe.Frozen = True
-        Me.TiLe.HeaderText = "Tỉ Lệ"
+        Me.TiLe.HeaderText = "Tỉ lệ"
         Me.TiLe.Name = "TiLe"
         Me.TiLe.ReadOnly = True
-        Me.TiLe.Width = 101
-        '
-        'labellb
-        '
-        Me.labellb.AutoSize = True
-        Me.labellb.BackColor = System.Drawing.Color.Transparent
-        Me.labellb.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labellb.ForeColor = System.Drawing.Color.Black
-        Me.labellb.Location = New System.Drawing.Point(385, 254)
-        Me.labellb.Name = "labellb"
-        Me.labellb.Size = New System.Drawing.Size(128, 17)
-        Me.labellb.TabIndex = 32
-        Me.labellb.Text = "Tổng số lượt mượn: "
-        '
-        'lbTongLuotMuon
-        '
-        Me.lbTongLuotMuon.BackColor = System.Drawing.Color.Transparent
-        Me.lbTongLuotMuon.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTongLuotMuon.ForeColor = System.Drawing.Color.MediumBlue
-        Me.lbTongLuotMuon.Location = New System.Drawing.Point(495, 252)
-        Me.lbTongLuotMuon.Name = "lbTongLuotMuon"
-        Me.lbTongLuotMuon.Size = New System.Drawing.Size(53, 21)
-        Me.lbTongLuotMuon.TabIndex = 32
-        Me.lbTongLuotMuon.Text = "sum"
-        Me.lbTongLuotMuon.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnThoat
         '
@@ -273,7 +261,7 @@ Partial Class ucBaoCaoSachMuon
         Me.btnThoat.OnHovercolor = System.Drawing.Color.Gray
         Me.btnThoat.OnHoverTextColor = System.Drawing.Color.Black
         Me.btnThoat.selected = False
-        Me.btnThoat.Size = New System.Drawing.Size(140, 41)
+        Me.btnThoat.Size = New System.Drawing.Size(150, 41)
         Me.btnThoat.TabIndex = 34
         Me.btnThoat.Text = "Thoát"
         Me.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -343,7 +331,7 @@ Partial Class ucBaoCaoSachMuon
         Me.btnXuatBaoCao.OnHovercolor = System.Drawing.Color.Gray
         Me.btnXuatBaoCao.OnHoverTextColor = System.Drawing.Color.Black
         Me.btnXuatBaoCao.selected = False
-        Me.btnXuatBaoCao.Size = New System.Drawing.Size(140, 41)
+        Me.btnXuatBaoCao.Size = New System.Drawing.Size(150, 41)
         Me.btnXuatBaoCao.TabIndex = 35
         Me.btnXuatBaoCao.Text = "Xuất báo cáo"
         Me.btnXuatBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -354,10 +342,12 @@ Partial Class ucBaoCaoSachMuon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.dgThongKe)
+        Me.Controls.Add(Me.labellb)
+        Me.Controls.Add(Me.lbTongLuotMuon)
         Me.Controls.Add(Me.btnThoat)
         Me.Controls.Add(Me.btnThongKe)
         Me.Controls.Add(Me.btnXuatBaoCao)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.tbNam)
@@ -365,8 +355,6 @@ Partial Class ucBaoCaoSachMuon
         Me.Controls.Add(Me.Label1)
         Me.Name = "ucBaoCaoSachMuon"
         Me.Size = New System.Drawing.Size(700, 530)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.dgThongKe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -378,14 +366,14 @@ Partial Class ucBaoCaoSachMuon
     Friend WithEvents tbThang As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents tbNam As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents dgThongKe As Bunifu.Framework.UI.BunifuCustomDataGrid
-    Friend WithEvents labellb As System.Windows.Forms.Label
-    Friend WithEvents lbTongLuotMuon As System.Windows.Forms.Label
     Friend WithEvents btnThoat As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnXuatBaoCao As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnThongKe As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents TenTheLoai As DataGridViewTextBoxColumn
+    Friend WithEvents labellb As Label
+    Friend WithEvents lbTongLuotMuon As Label
+    Friend WithEvents dgThongKe As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents MaTheLoai As DataGridViewTextBoxColumn
+    Friend WithEvents Ten As DataGridViewTextBoxColumn
     Friend WithEvents SoLuotMuon As DataGridViewTextBoxColumn
     Friend WithEvents TiLe As DataGridViewTextBoxColumn
 End Class

@@ -19,17 +19,17 @@ Public Class ucBaoCaoSachMuon
             Return
         End If
 
-        Dim listten As New List(Of String)
+        Dim list As New List(Of TheLoaiDTO)
         Dim listsoluotmuon As New List(Of Integer)
 
         If month > 0 And year > 0 Then
-            result = ctpmBus.baocao1(month, year, listten, listsoluotmuon)
+            result = ctpmBus.baocao_TheoTheLoai_ThangNam(month, year, list, listsoluotmuon)
         ElseIf month > 0 Then
-            result = ctpmBus.baocao2(month, listten, listsoluotmuon)
+            result = ctpmBus.baocao_TheoTheLoai_Thang(month, list, listsoluotmuon)
         ElseIf year > 0 Then
-            result = ctpmBus.baocao3(year, listten, listsoluotmuon)
+            result = ctpmBus.baocao_TheoTheLoai_Nam(year, list, listsoluotmuon)
         Else
-            result = ctpmBus.baocao4(listten, listsoluotmuon)
+            result = ctpmBus.baocao_TheoTheLoai(list, listsoluotmuon)
         End If
 
         If result.FlagResult = False Then
@@ -39,7 +39,7 @@ Public Class ucBaoCaoSachMuon
             Return
         End If
 
-        showresult(listten, listsoluotmuon)
+        showresult(list, listsoluotmuon)
 
 
     End Sub
@@ -67,7 +67,7 @@ Public Class ucBaoCaoSachMuon
 
     End Function
 
-    Private Function showresult(listten As List(Of String), listsoluotmuon As List(Of Integer))
+    Private Function showresult(listten As List(Of TheLoaiDTO), listsoluotmuon As List(Of Integer))
         dgThongKe.Rows.Clear()
 
         If listten.Count = 0 Then
@@ -93,13 +93,13 @@ Public Class ucBaoCaoSachMuon
             Dim tile As Double = listsoluotmuon.ElementAt(i) * 100 / sum
             Dim phantram As String = Math.Round(tile, 2).ToString + "%"
             Dim s As String()
-            s = New String() {listten.ElementAt(i), listsoluotmuon.ElementAt(i).ToString(), phantram}
+            s = New String() {listten.ElementAt(i).MaTheLoai, listten.ElementAt(i).TenTheLoai, listsoluotmuon.ElementAt(i).ToString(), phantram}
             dgThongKe.Rows.Add(s)
         Next
 
     End Function
 
-    Private Sub dgThongKe_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgThongKe.RowPostPaint
+    Private Sub dgThongKe_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs)
         Using b As SolidBrush = New SolidBrush(dgThongKe.RowHeadersDefaultCellStyle.ForeColor)
             e.Graphics.DrawString((e.RowIndex + 1).ToString(), dgThongKe.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 12, e.RowBounds.Location.Y + 1)
         End Using
@@ -116,16 +116,8 @@ Public Class ucBaoCaoSachMuon
         Dim grgrgrpar = New frmHome
         grgrgrpar = grgrpar.Parent
         grgrgrpar.btnNguoiDung.selected = False
-        Dim ucThuVien As New ucThuVien
-        grgrpar.Controls.Add(ucThuVien)
-
-        'grgrgrpar.btnNguoiDung.selected = False
-        'grgrgrpar.btnTiepNhanSachMoi.selected = False
-        'grgrgrpar.btnTraCuu.selected = False
-        'grgrgrpar.btnQuanLyDocGia.selected = False
-        'grgrgrpar.btnNhanTraSach.selected = False
-        'grgrgrpar.btnBaoCao.selected = False
-        'grgrgrpar.btnDangXuat.selected = False
+        Dim ucBaoCao As New ucBaoCao
+        grgrpar.Controls.Add(ucBaoCao)
     End Sub
 
     Private Sub ucBaoCaoSachMuon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -228,7 +220,7 @@ Public Class ucBaoCaoSachMuon
 
             ''''
             ' rows on datagrid
-            For i As Integer = 0 To dgThongKe.Rows.Count - 2
+            For i As Integer = 0 To dgThongKe.Rows.Count - 1
                 For j As Integer = 0 To dgThongKe.Columns.Count - 1
                     pdfcell = New PdfPCell(New Phrase(dgThongKe(j, i).Value.ToString(), fntNormal))
                     pdftable.HorizontalAlignment = PdfPCell.ALIGN_LEFT
