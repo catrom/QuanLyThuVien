@@ -80,7 +80,6 @@ Public Class VaiTroDAL
                     Dim reader As SqlDataReader
                     reader = comm.ExecuteReader()
                     If reader.HasRows = True Then
-                        list.Clear()
                         While reader.Read()
                             list.Add(New VaiTroDTO(reader("mavaitro"), reader("tenvaitro")))
                         End While

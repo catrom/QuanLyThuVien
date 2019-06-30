@@ -287,7 +287,7 @@ Public Class ucTiepNhanSachMoi
             End If
         Next
 
-        MessageBox.Show("Thêm dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK)
+        MessageBox.Show("Tiếp nhận sách thành công!", "Thông báo", MessageBoxButtons.OK)
         BackWithData(sender)
     End Sub
 End Class

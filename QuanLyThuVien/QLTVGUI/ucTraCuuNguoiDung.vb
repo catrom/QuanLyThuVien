@@ -9,8 +9,9 @@ Public Class ucTraCuuNguoiDung
     Private Sub TraCuuNguoiDung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'cbVaiTro
         Dim listVaiTro = New List(Of VaiTroDTO)
+        listVaiTro.Add(New VaiTroDTO("", "Tất cả"))
 
-        VaiTroBUS.selectAll(listVaiTro)
+        vaitroBus.selectAll(listVaiTro)
         cbVaiTro.DataSource = New BindingSource(listVaiTro, String.Empty)
         cbVaiTro.DisplayMember = "tenvaitro"
         cbVaiTro.ValueMember = "mavaitro"

@@ -93,7 +93,7 @@ Public Class ucChoMuonSach
 
         For i As Integer = 0 To listMaSachDangMuon.Count - 1
             Dim s As String()
-            s = New String() {listMaSachDangMuon.ElementAt(i), listTenSachDangMuon.ElementAt(i), listNgayMuon(i).ToString("dd/MM/yyyy hh:mm:ss")}
+            s = New String() {listMaSachDangMuon.ElementAt(i), listTenSachDangMuon.ElementAt(i), listNgayMuon(i).ToString("dd/MM/yyyy")}
             dgDanhSach.Rows.Add(s)
         Next
 
