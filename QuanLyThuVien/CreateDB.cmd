@@ -1,1 +1,1 @@
-SQLCMD -S .\SQLEXPRESS -E -i CreateDB.sql
+SQLCMD -S .\SQLEXPRESS -E -i TestingData.sql
